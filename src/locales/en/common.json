@@ -1,0 +1,75 @@
+{
+  "brand": "Speranza Supply",
+  "demoBanner": "Demo project: no real items are sold and no money is charged.",
+  "nav": {
+    "shop": "Shop",
+    "weapons": "Weapons",
+    "blueprints": "Blueprints",
+    "mods": "Mods",
+    "bundles": "Bundles",
+    "discord": "Discord",
+    "account": "My account",
+    "admin": "Admin",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "cart": "Cart",
+    "menu": "Menu"
+  },
+  "language": "Language",
+  "footer": {
+    "notAffiliated": "Fan project not affiliated with Embark Studios. ARC Raiders is a trademark of Embark Studios AB.",
+    "howItWorks": "How it works",
+    "faq": "FAQ",
+    "terms": "Terms",
+    "refunds": "Refunds",
+    "privacy": "Privacy",
+    "contact": "Contact"
+  },
+  "home": {
+    "eyebrow": "Speranza counter",
+    "title": "Gear up before you head topside",
+    "lede": "Weapons, mods and blueprints. Pick a day and time, join our Discord room and we hand it over in a match together.",
+    "ctaShop": "Browse the shop",
+    "ctaDiscord": "Join the Discord",
+    "featured": "Featured",
+    "seeAll": "See all",
+    "stepsTitle": "How it works",
+    "steps": {
+      "pick": { "title": "Pick", "text": "A weapon with its mods, a blueprint or a ready-made bundle." },
+      "book": { "title": "Book a slot", "text": "Choose a day and time. You get a ticket with your room and your admin." },
+      "room": { "title": "Join the room", "text": "At your time, join the voice channel and say your code." },
+      "play": { "title": "Play together", "text": "Squad up, pick up the item and extract." }
+    }
+  },
+  "discord": {
+    "title": "Our Discord",
+    "lede": "Deliveries happen here. Every appointment has a voice room and an assigned admin.",
+    "join": "Join the Discord",
+    "notConfigured": "The invite link is not set up yet.",
+    "rulesTitle": "Rules for your safety",
+    "rules": [
+      "Staff never message you first in DMs.",
+      "The price is always the one on your appointment ticket.",
+      "Only the admin named on your ticket will serve you.",
+      "If anyone asks you to pay outside of what is shown, tell us in #support."
+    ]
+  },
+  "comingSoon": {
+    "title": "Under construction",
+    "text": "This section arrives in phase {{phase}} of the roadmap."
+  },
+  "notFound": {
+    "title": "Uncharted zone",
+    "text": "The page you are looking for does not exist.",
+    "back": "Back to home"
+  },
+  "error": {
+    "generic": "Something went wrong. Please try again.",
+    "retry": "Retry"
+  },
+  "setup": {
+    "title": "Supabase is not connected",
+    "text": "Copy .env.example to .env.local, fill in VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY and restart `npm run dev`."
+  },
+  "loading": "Loading…"
+}

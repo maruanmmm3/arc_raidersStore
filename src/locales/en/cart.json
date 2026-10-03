@@ -1,0 +1,13 @@
+{
+  "title": "Cart",
+  "empty": "Your cart is empty.",
+  "goShop": "Go to the shop",
+  "qty": "Quantity",
+  "remove": "Remove",
+  "withMods": "With:",
+  "subtotal": "Estimated subtotal",
+  "estimateNote": "The final price is calculated on the server when you confirm the order.",
+  "checkout": "Continue",
+  "items_one": "{{count}} item",
+  "items_other": "{{count}} items"
+}

@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Tokens de diseño: retrofuturismo de Speranza.
+   Se usan como clases de Tailwind: bg-carbon-900, text-signal, border-rarity-epic… */
+@theme {
+  --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  --color-carbon-950: #0c0f10;
+  --color-carbon-900: #111416;
+  --color-carbon-850: #15191c;
+  --color-carbon-800: #181c1f;
+  --color-carbon-700: #22282c;
+  --color-carbon-600: #2c3337;
+  --color-carbon-500: #3b4448;
+
+  --color-concrete-50: #f5f7f4;
+  --color-concrete-100: #e8ebe7;
+  --color-concrete-300: #c3cbc5;
+  --color-concrete-400: #a2aba6;
+  --color-concrete-500: #7f8c86;
+
+  --color-signal: #d9442a;
+  --color-signal-hover: #f0674c;
+  --color-ember: #e9a92e;
+  --color-valve: #3e9a62;
+  --color-monitor: #2e9bbe;
+
+  --color-rarity-common: #8a9196;
+  --color-rarity-uncommon: #4fae5b;
+  --color-rarity-rare: #3c86d6;
+  --color-rarity-epic: #b05bd6;
+  --color-rarity-legendary: #e7a928;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-carbon-900 text-concrete-100 font-sans antialiased;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-monitor;
+  }
+}
+
+@layer components {
+  /* Banda de cuatro colores de la identidad visual */
+  .stripe {
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--color-signal) 0 25%,
+      var(--color-ember) 25% 50%,
+      var(--color-valve) 50% 75%,
+      var(--color-monitor) 75% 100%
+    );
+  }
+  .label {
+    @apply font-mono text-xs uppercase tracking-widest text-concrete-400;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

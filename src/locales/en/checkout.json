@@ -1,0 +1,61 @@
+{
+  "title": "Confirm order",
+  "empty": "Your cart is empty.",
+  "steps": {
+    "details": "Your details",
+    "slot": "Day and time"
+  },
+  "details": {
+    "embarkId": "Embark ID",
+    "embarkIdHint": "Format Name#1234. The admin will add you with this ID.",
+    "platform": "Platform",
+    "choosePlatform": "Choose your platform",
+    "region": "Game region",
+    "regions": {
+      "latam": "Latin America",
+      "na": "North America",
+      "eu": "Europe",
+      "asia": "Asia",
+      "oce": "Oceania"
+    },
+    "note": "Note for the admin (optional)",
+    "notePlaceholder": "For example: I prefer to speak Spanish",
+    "saveToProfile": "Save ID and platform to my profile",
+    "paymentMode": "How do you want to pay?",
+    "payDiscord": "Arrange on Discord",
+    "payDiscordHint": "Book your slot now and settle payment with the admin before the match.",
+    "payOnline": "Pay now",
+    "payOnlineHint": "Coming soon.",
+    "acceptTerms": "I accept the terms and the refund policy",
+    "continue": "Pick day and time",
+    "errors": {
+      "embarkId": "Use the format Name#1234.",
+      "platform": "Choose your platform.",
+      "terms": "You need to accept the terms to continue."
+    },
+    "recordingNotice": "Record the full delivery match. If you lose the product and want to file a claim, the recording is the required evidence (24-hour deadline)."
+  },
+  "slot": {
+    "title": "Pick a day and time",
+    "yourTimezone": "Times in your time zone: {{tz}}",
+    "storeTime": "{{time}} in {{tz}}",
+    "none": "No free slots in the next few days. Check back later or message us on Discord.",
+    "noneDay": "No slots left on this day.",
+    "selected": "Your appointment",
+    "back": "Change my details",
+    "confirm": "Confirm and book",
+    "confirming": "Booking…",
+    "summary": "Summary",
+    "total": "Total",
+    "totalNote": "Calculated on the server when you confirm."
+  },
+  "errors": {
+    "slot_taken": "Someone just booked that slot. Pick another one.",
+    "out_of_stock": "Not enough stock for a product in your cart ({{detail}}).",
+    "blocked": "Your account is blocked. Message us on Discord.",
+    "online_disabled": "Online payment is not available right now.",
+    "invalid_order": "Check your order details: something is not valid.",
+    "unauthorized": "Your session expired. Please sign in again.",
+    "generic": "The order could not be created. Please try again."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Confirmar pedido",
+  "empty": "Tu carrito está vacío.",
+  "steps": {
+    "details": "Tus datos",
+    "slot": "Día y hora"
+  },
+  "details": {
+    "embarkId": "ID de Embark",
+    "embarkIdHint": "Formato Nombre#1234. El admin te agregará con este ID.",
+    "platform": "Plataforma",
+    "choosePlatform": "Elige tu plataforma",
+    "region": "Región de juego",
+    "regions": {
+      "latam": "Latinoamérica",
+      "na": "Norteamérica",
+      "eu": "Europa",
+      "asia": "Asia",
+      "oce": "Oceanía"
+    },
+    "note": "Nota para el admin (opcional)",
+    "notePlaceholder": "Por ejemplo: prefiero hablar en inglés",
+    "saveToProfile": "Guardar ID y plataforma en mi perfil",
+    "paymentMode": "¿Cómo quieres pagar?",
+    "payDiscord": "Acordar por Discord",
+    "payDiscordHint": "Reservas tu cita ahora y cierras el pago con el admin antes de la partida.",
+    "payOnline": "Pagar ahora",
+    "payOnlineHint": "Disponible próximamente.",
+    "acceptTerms": "Acepto los términos y la política de reembolsos",
+    "continue": "Elegir día y hora",
+    "errors": {
+      "embarkId": "Usa el formato Nombre#1234.",
+      "platform": "Elige tu plataforma.",
+      "terms": "Tienes que aceptar los términos para continuar."
+    },
+    "recordingNotice": "Graba la partida de entrega completa. Si pierdes el producto y quieres reclamar, la grabación es la prueba obligatoria (plazo de 24 horas)."
+  },
+  "slot": {
+    "title": "Elige día y hora",
+    "yourTimezone": "Horas en tu zona horaria: {{tz}}",
+    "storeTime": "{{time}} en {{tz}}",
+    "none": "No hay huecos libres en los próximos días. Vuelve a mirar más tarde o escríbenos en Discord.",
+    "noneDay": "No quedan huecos este día.",
+    "selected": "Tu cita",
+    "back": "Cambiar mis datos",
+    "confirm": "Confirmar y reservar cita",
+    "confirming": "Reservando…",
+    "summary": "Resumen",
+    "total": "Total",
+    "totalNote": "Calculado en el servidor al confirmar."
+  },
+  "errors": {
+    "slot_taken": "Alguien acaba de reservar ese hueco. Elige otro.",
+    "out_of_stock": "No queda stock suficiente de un producto del carrito ({{detail}}).",
+    "blocked": "Tu cuenta está bloqueada. Escríbenos en Discord.",
+    "online_disabled": "El pago online no está disponible ahora mismo.",
+    "invalid_order": "Revisa los datos del pedido: algo no es válido.",
+    "unauthorized": "Tu sesión ha caducado. Vuelve a entrar.",
+    "generic": "No se ha podido crear el pedido. Inténtalo de nuevo."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "title": {
+    "all": "Shop",
+    "weapon": "Weapons",
+    "blueprint": "Blueprints",
+    "mod": "Mods",
+    "bundle": "Bundles"
+  },
+  "kind": {
+    "weapon": "Weapon",
+    "blueprint": "Blueprint",
+    "mod": "Mod",
+    "bundle": "Bundle"
+  },
+  "rarity": {
+    "common": "Common",
+    "uncommon": "Uncommon",
+    "rare": "Rare",
+    "epic": "Epic",
+    "legendary": "Legendary"
+  },
+  "weaponType": {
+    "assault_rifle": "Assault rifle",
+    "battle_rifle": "Battle rifle",
+    "smg": "SMG",
+    "shotgun": "Shotgun",
+    "pistol": "Pistol",
+    "hand_cannon": "Hand cannon",
+    "lmg": "LMG",
+    "sniper": "Sniper",
+    "special": "Special"
+  },
+  "slot": {
+    "muzzle": "Muzzle",
+    "optic": "Optic",
+    "barrel": "Barrel",
+    "underbarrel": "Underbarrel",
+    "magazine": "Magazine",
+    "stock": "Stock",
+    "tech": "Tech"
+  },
+  "stats": {
+    "damage": "Damage",
+    "fire_rate": "Fire rate",
+    "range": "Range",
+    "stability": "Stability",
+    "magazine": "Magazine"
+  },
+  "tier": "Tier {{tier}}",
+  "stock": {
+    "in": "In stock",
+    "low": "{{count}} left",
+    "out": "Sold out"
+  },
+  "filters": {
+    "title": "Filters",
+    "search": "Search by name",
+    "kind": "Category",
+    "allKinds": "All",
+    "type": "Weapon type",
+    "anyType": "Any",
+    "rarity": "Rarity",
+    "price": "Price",
+    "min": "Min",
+    "max": "Max",
+    "sort": "Sort",
+    "clear": "Clear filters"
+  },
+  "sort": {
+    "featured": "Featured",
+    "price_asc": "Price: low to high",
+    "price_desc": "Price: high to low",
+    "rarity_desc": "Rarity: highest first",
+    "newest": "Newest"
+  },
+  "results_one": "{{count}} product",
+  "results_other": "{{count}} products",
+  "empty": "No products match these filters.",
+  "page": "Page {{page}} of {{pages}}",
+  "prev": "Previous",
+  "next": "Next",
+  "detail": {
+    "back": "Back to shop",
+    "addToCart": "Add to cart",
+    "added": "Added to cart",
+    "mods": "Compatible mods",
+    "modsHint": "Pick at most one per slot. They are delivered fitted to the weapon.",
+    "none": "None",
+    "includes": "Includes",
+    "unlocks": "Unlocks",
+    "total": "Total with mods",
+    "notFound": "This product does not exist or is no longer available.",
+    "deliveryNote": "When you confirm the order you pick a day and time to receive it in a match with our staff."
+  }
+}

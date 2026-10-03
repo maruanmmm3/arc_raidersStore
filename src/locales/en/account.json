@@ -1,0 +1,32 @@
+{
+  "title": "My account",
+  "nav": {
+    "profile": "Profile",
+    "orders": "Orders",
+    "appointments": "Appointments"
+  },
+  "profile": {
+    "title": "Profile",
+    "username": "Username",
+    "embarkId": "Embark ID",
+    "embarkIdHint": "Format Name#1234. You can find it on your in-game profile.",
+    "platform": "Platform",
+    "noPlatform": "Not set",
+    "language": "Language",
+    "discord": "Discord",
+    "discordLinked": "Linked as {{name}}",
+    "discordNotLinked": "Not linked. Sign in with Discord to link it.",
+    "save": "Save changes",
+    "saved": "Changes saved.",
+    "errors": {
+      "embarkId": "Use the format Name#1234.",
+      "usernameTaken": "That username is already taken."
+    }
+  },
+  "platform": {
+    "pc_steam": "PC (Steam)",
+    "pc_epic": "PC (Epic)",
+    "ps5": "PlayStation 5",
+    "xbox": "Xbox Series X|S"
+  }
+}

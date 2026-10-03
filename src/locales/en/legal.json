@@ -1,0 +1,313 @@
+{
+  "updated": "Last updated: October 3, 2026",
+  "demoNotice": "Speranza Supply is a demo project built for learning: no real items are sold and no money is charged. These texts are a template and are not legal advice.",
+  "toc": "On this page",
+  "howItWorks": {
+    "title": "How it works",
+    "lede": "ARC Raiders has no market or trade screen: an item only moves from one player to another if it is dropped during a match. That is why every delivery is a match together, on the day and time you choose.",
+    "steps": [
+      {
+        "title": "Pick what you need",
+        "text": "Weapons with their mods, blueprints or ready-made bundles. The price you see is an estimate: the final one is calculated on the server when you confirm."
+      },
+      {
+        "title": "Book your slot",
+        "text": "Enter your Embark ID and platform, and pick a free slot on the calendar. Times are shown in your time zone."
+      },
+      {
+        "title": "Get your ticket",
+        "text": "You get an appointment code, the Discord room and the admin who will serve you. You can add it to your calendar."
+      },
+      {
+        "title": "Join the room",
+        "text": "At your time, join the assigned voice channel and tell the admin your code. If you agreed to pay on Discord, payment is settled before starting."
+      },
+      {
+        "title": "Play together",
+        "text": "You add each other in game, squad up and the admin drops the items in a safe spot. You pick them up and extract."
+      },
+      {
+        "title": "Delivery confirmed",
+        "text": "Once you extract, the admin marks the order as delivered and your ticket is completed."
+      },
+      {
+        "title": "Confirm the delivery",
+        "text": "When the admin marks the order as delivered, press \"Confirm I received it\" on your ticket. If something went wrong, do not confirm: file a claim with your recording."
+      }
+    ],
+    "prepareTitle": "Have this ready",
+    "prepare": [
+      "Your exact Embark ID (Name#1234).",
+      "A Discord account, already joined to our server.",
+      "Free inventory space for what you will receive.",
+      "About 30 free minutes at your appointment time.",
+      "A way to record the match (for example Steam recording, Xbox Game Bar, the PS5 Create button or OBS)."
+    ],
+    "timesTitle": "Timing",
+    "times": [
+      "You can book from 2 hours up to 14 days ahead.",
+      "Each appointment lasts 30 minutes.",
+      "You can cancel for free up to 3 hours before if you have not paid yet.",
+      "If you do not join the room within 15 minutes, the appointment is marked as a no-show."
+    ],
+    "cta": "Browse the shop"
+  },
+  "faq": {
+    "title": "FAQ",
+    "lede": "If your question is not here, message us in the #support channel on Discord.",
+    "items": [
+      {
+        "q": "How do I receive what I buy?",
+        "a": "In a match with an admin, on the day and time you booked. They drop the items in a safe spot, you pick them up and extract."
+      },
+      {
+        "q": "Which platforms do you deliver on?",
+        "a": "PC (Steam and Epic), PlayStation 5 and Xbox Series X|S. Choose yours in the order so someone on your platform serves you."
+      },
+      {
+        "q": "When do I pay?",
+        "a": "If you choose \"Arrange on Discord\", you settle payment with the admin before the match and they record it on your order. Online payment is not available yet."
+      },
+      {
+        "q": "What if I die or fail to extract?",
+        "a": "We repeat the delivery once for free, in a new appointment."
+      },
+      {
+        "q": "Do I have to record the delivery match?",
+        "a": "Yes, we always recommend it. If you lose the product during the delivery and want to file a claim, the full match recording is the required evidence. Keep it for at least 7 days."
+      },
+      {
+        "q": "What does \"confirming the delivery\" mean?",
+        "a": "When the admin marks your order as delivered, you confirm on your ticket that you received it. From then on the delivery is closed and claims for loss are not accepted. If something went wrong, claim before confirming."
+      },
+      {
+        "q": "What if I cannot make my appointment?",
+        "a": "Cancel from your ticket up to 3 hours before if you have not paid. If you already paid, message us on Discord and we will find another time."
+      },
+      {
+        "q": "How do I know I am talking to staff?",
+        "a": "Your ticket shows the exact name of the assigned admin. Staff never DM you first or ask you to pay anything other than what your ticket shows."
+      },
+      {
+        "q": "What are blueprints?",
+        "a": "They permanently unlock crafting a weapon or mod at your in-game workshop."
+      },
+      {
+        "q": "Do mods come fitted?",
+        "a": "Yes: if you pick mods on a weapon's page, they are delivered fitted to it."
+      },
+      {
+        "q": "Can this affect my game account?",
+        "a": "Embark Studios' terms forbid trading game items for anything of value and provide for sanctions. Read them before buying."
+      },
+      {
+        "q": "Do you store my data?",
+        "a": "Only what we need to run your account and orders. Our privacy policy explains it."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms and conditions",
+    "lede": "These terms govern the use of Speranza Supply and the booking of deliveries.",
+    "sections": [
+      {
+        "title": "Who we are",
+        "body": [
+          "Speranza Supply is a fan project not affiliated with Embark Studios AB. ARC Raiders and its elements are trademarks and property of Embark Studios.",
+          "In its current version it is a demo project: orders are not charged and no real items are delivered."
+        ]
+      },
+      {
+        "title": "Your account",
+        "body": [
+          "You need an account to place an order. You are responsible for keeping your password secret and for the details you provide (Embark ID, platform) being correct.",
+          "We may block accounts that make fake bookings, repeatedly miss appointments or mistreat staff."
+        ]
+      },
+      {
+        "title": "Orders and prices",
+        "body": [
+          "Prices are shown in the stated currency. The final amount is calculated on our server when you confirm the order and is the one shown on your ticket.",
+          "Availability depends on stock when you confirm. Units stay reserved for your order until delivery or cancellation."
+        ]
+      },
+      {
+        "title": "Appointments and delivery",
+        "body": [
+          "Delivery takes place in a joint match at the booked time. You must join the assigned Discord room on time and follow the admin's instructions.",
+          "If you do not show up within 15 minutes, the appointment is marked as a no-show. If delivery fails for in-game reasons (death, disconnection), it is repeated once for free."
+        ]
+      },
+      {
+        "title": "Match recording and claims",
+        "body": [
+          "We ask you to record the full delivery match on video: from joining the squad with the admin until you extract. The video must be uncut and show your inventory when you pick up the items and when you extract.",
+          "If you lose the product during the delivery match or do not receive it, you can file a claim within 24 hours of your appointment time. Message us in #support on Discord with your appointment code and a link to the recording (unlisted YouTube, Google Drive, Medal or another service). Keep the video for at least 7 days.",
+          "The recording is the main evidence to resolve the claim. Without it we cannot process claims for loss or non-delivery, unless our own record of the delivery shows the failure.",
+          "Staff may also record the delivery as evidence. Both recordings are used only to resolve the claim."
+        ]
+      },
+      {
+        "title": "Delivery confirmation",
+        "body": [
+          "When the admin marks your order as delivered, your ticket shows the \"Confirm I received it\" button. Pressing it gives your confirmation: you confirm you extracted with the items in your order.",
+          "Once you confirm, the delivery is considered complete and claims for loss or non-delivery are no longer accepted. What happens to the items in later matches is not part of the delivery.",
+          "If something went wrong, do not confirm: file a claim first as described in the previous section."
+        ]
+      },
+      {
+        "title": "Payments",
+        "body": [
+          "With \"Arrange on Discord\", payment is settled with the admin before the match and recorded on your order with a reference. Never pay an amount different from your ticket."
+        ]
+      },
+      {
+        "title": "Cancellations and refunds",
+        "body": [
+          "Cancellation and refund terms are in the refund policy, which is part of these terms."
+        ]
+      },
+      {
+        "title": "Relationship with ARC Raiders",
+        "body": [
+          "Embark Studios' terms of service forbid trading game items for anything of value and provide for sanctions on the accounts involved. By using this service you acknowledge that risk.",
+          "We have no control over the game: changes, progress wipes or sanctions by Embark are outside our responsibility."
+        ]
+      },
+      {
+        "title": "Liability",
+        "body": [
+          "We provide the service with care but do not guarantee uninterrupted availability. Our liability is limited, at most, to the amount paid for the affected order."
+        ]
+      },
+      {
+        "title": "Changes",
+        "body": [
+          "We may update these terms. We will publish the date of the last update and, if the change is significant, announce it on Discord."
+        ]
+      },
+      {
+        "title": "Contact",
+        "body": [
+          "For any question about these terms, reach us through the channels on the contact page."
+        ]
+      }
+    ]
+  },
+  "refunds": {
+    "title": "Refund policy",
+    "lede": "We want every delivery to go well. If it does not, this is what we do.",
+    "sections": [
+      {
+        "title": "Free cancellation",
+        "body": [
+          "You can cancel your order from the ticket up to 3 hours before the appointment if you have not paid yet. The slot and reserved stock are released immediately."
+        ]
+      },
+      {
+        "title": "Full refund",
+        "body": [
+          "If you already paid and we cannot deliver (out of stock, no admin available or a mistake on our side), we refund the full amount.",
+          "If we cannot serve you at your appointment and you do not accept another time, we also refund the full amount."
+        ]
+      },
+      {
+        "title": "Failed delivery",
+        "body": [
+          "If you die or fail to extract during the delivery, we repeat it once for free in a new appointment. From the second failed attempt we assess each case.",
+          "If the problem was not solved during the appointment and you want to claim later, you need the match recording (see \"Claims for loss\")."
+        ]
+      },
+      {
+        "title": "Claims for loss",
+        "body": [
+          "Deadline: 24 hours from your appointment time, and always before confirming the delivery.",
+          "Required evidence: the full, uncut recording of the delivery match, from joining the squad until you extract.",
+          "Once we review the recording, if it confirms you did not receive the product because of us, we repeat the delivery or refund the amount."
+        ]
+      },
+      {
+        "title": "No-show",
+        "body": [
+          "If you do not join the room within 15 minutes, you can book a new appointment once. If you miss it again, the order is cancelled and, if you paid, refunded minus any handling costs you were told about before paying."
+        ]
+      },
+      {
+        "title": "When there is no refund",
+        "body": [
+          "Once you confirm the delivery on your ticket (or you extracted with the items) there is no refund.",
+          "Nor if you claim a loss without the match recording, after the 24-hour deadline, or if we cannot deliver because your game account was sanctioned or the Embark ID you gave was wrong and you did not correct it in time."
+        ]
+      },
+      {
+        "title": "How to request it",
+        "body": [
+          "Message us in #support on Discord with your appointment code. We reply within 48 hours. Refunds go back through the same method you paid with."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "lede": "What data we keep, why, and what control you have over it.",
+    "sections": [
+      {
+        "title": "Data we collect",
+        "body": [
+          "Account: email, username and preferred language. If you sign in with Discord, your Discord ID and username.",
+          "Orders: Embark ID, platform, region, optional note, products, amounts, booked appointment, payment and order status."
+        ]
+      },
+      {
+        "title": "What we use it for",
+        "body": [
+          "To run your account, prepare and deliver your orders, coordinate the appointment on Discord, help you in support and prevent abuse. We do not sell your data or use it for advertising."
+        ]
+      },
+      {
+        "title": "Who sees it",
+        "body": [
+          "Only Speranza Supply staff, and only what is needed to handle your order. The assigned admin sees your Embark ID, your Discord username and what you ordered."
+        ]
+      },
+      {
+        "title": "Where it is stored",
+        "body": [
+          "In Supabase (database and authentication). Passwords are not stored in plain text: Supabase Auth handles them."
+        ]
+      },
+      {
+        "title": "Storage in your browser",
+        "body": [
+          "We keep your session, cart contents and chosen language in your browser. We do not use advertising or tracking cookies."
+        ]
+      },
+      {
+        "title": "How long",
+        "body": [
+          "Account data, for as long as you keep the account. Orders, for as long as needed to handle claims and meet legal obligations."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "You can view and correct your data in My account. To request a copy or the deletion of your account, reach us through the contact channels."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "lede": "Discord is the fastest way to reach us. Have your appointment code at hand if your question is about an order.",
+    "discordTitle": "Discord",
+    "discordText": "#support channel for questions and order issues. We reply within 48 hours.",
+    "discordCta": "Join the Discord",
+    "discordMissing": "The invite link is not set up yet.",
+    "emailTitle": "Email",
+    "emailText": "For privacy matters or if you do not use Discord.",
+    "copy": "Copy",
+    "copied": "Copied",
+    "safetyTitle": "For your safety",
+    "safety": "Staff never DM you first or ask for passwords. If someone does, tell us in #support."
+  }
+}

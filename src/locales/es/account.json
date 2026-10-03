@@ -1,0 +1,32 @@
+{
+  "title": "Mi cuenta",
+  "nav": {
+    "profile": "Perfil",
+    "orders": "Pedidos",
+    "appointments": "Citas"
+  },
+  "profile": {
+    "title": "Perfil",
+    "username": "Nombre de usuario",
+    "embarkId": "ID de Embark",
+    "embarkIdHint": "Formato Nombre#1234. Lo ves en tu perfil del juego.",
+    "platform": "Plataforma",
+    "noPlatform": "Sin elegir",
+    "language": "Idioma",
+    "discord": "Discord",
+    "discordLinked": "Vinculado como {{name}}",
+    "discordNotLinked": "Sin vincular. Entra con Discord para vincularlo.",
+    "save": "Guardar cambios",
+    "saved": "Cambios guardados.",
+    "errors": {
+      "embarkId": "Usa el formato Nombre#1234.",
+      "usernameTaken": "Ese nombre de usuario ya está en uso."
+    }
+  },
+  "platform": {
+    "pc_steam": "PC (Steam)",
+    "pc_epic": "PC (Epic)",
+    "ps5": "PlayStation 5",
+    "xbox": "Xbox Series X|S"
+  }
+}

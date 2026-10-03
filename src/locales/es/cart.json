@@ -1,0 +1,13 @@
+{
+  "title": "Carrito",
+  "empty": "Tu carrito está vacío.",
+  "goShop": "Ir a la tienda",
+  "qty": "Cantidad",
+  "remove": "Quitar",
+  "withMods": "Con:",
+  "subtotal": "Subtotal estimado",
+  "estimateNote": "El precio final se calcula en el servidor al confirmar el pedido.",
+  "checkout": "Continuar",
+  "items_one": "{{count}} artículo",
+  "items_other": "{{count}} artículos"
+}

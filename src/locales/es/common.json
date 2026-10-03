@@ -1,0 +1,75 @@
+{
+  "brand": "Speranza Supply",
+  "demoBanner": "Proyecto demo: no se venden objetos reales ni se cobra dinero.",
+  "nav": {
+    "shop": "Tienda",
+    "weapons": "Armas",
+    "blueprints": "Planos",
+    "mods": "Mods",
+    "bundles": "Packs",
+    "discord": "Discord",
+    "account": "Mi cuenta",
+    "admin": "Admin",
+    "login": "Entrar",
+    "logout": "Salir",
+    "cart": "Carrito",
+    "menu": "Menú"
+  },
+  "language": "Idioma",
+  "footer": {
+    "notAffiliated": "Proyecto de fans sin relación con Embark Studios. ARC Raiders es una marca de Embark Studios AB.",
+    "howItWorks": "Cómo funciona",
+    "faq": "Preguntas frecuentes",
+    "terms": "Términos",
+    "refunds": "Reembolsos",
+    "privacy": "Privacidad",
+    "contact": "Contacto"
+  },
+  "home": {
+    "eyebrow": "Mostrador de Speranza",
+    "title": "Equípate antes de subir a la superficie",
+    "lede": "Armas, modificaciones y planos. Reservas día y hora, entras a nuestra sala de Discord y te lo entregamos en una partida juntos.",
+    "ctaShop": "Ver la tienda",
+    "ctaDiscord": "Unirme al Discord",
+    "featured": "Destacados",
+    "seeAll": "Ver todo",
+    "stepsTitle": "Cómo funciona",
+    "steps": {
+      "pick": { "title": "Elige", "text": "Un arma con sus mods, un plano o un pack ya configurado." },
+      "book": { "title": "Reserva tu cita", "text": "Eliges día y hora. Te damos un ticket con tu sala y tu admin." },
+      "room": { "title": "Entra a la sala", "text": "A la hora, entras al canal de voz y dices tu código." },
+      "play": { "title": "Partida juntos", "text": "Jugáis en escuadra, recoges el objeto y extraes." }
+    }
+  },
+  "discord": {
+    "title": "Nuestro Discord",
+    "lede": "Aquí se hacen las entregas. Cada cita tiene una sala de voz y un admin asignado.",
+    "join": "Unirme al Discord",
+    "notConfigured": "El enlace de invitación aún no está configurado.",
+    "rulesTitle": "Normas para tu seguridad",
+    "rules": [
+      "El staff nunca te escribe primero por mensaje privado.",
+      "El precio es siempre el que aparece en tu ticket de cita.",
+      "Solo te atiende el admin que figura en tu ticket.",
+      "Si alguien te pide pagar fuera de lo indicado, avísanos en #soporte."
+    ]
+  },
+  "comingSoon": {
+    "title": "En construcción",
+    "text": "Esta sección llega en la fase {{phase}} del roadmap."
+  },
+  "notFound": {
+    "title": "Zona sin cartografiar",
+    "text": "La página que buscas no existe.",
+    "back": "Volver al inicio"
+  },
+  "error": {
+    "generic": "Algo ha fallado. Inténtalo de nuevo.",
+    "retry": "Reintentar"
+  },
+  "setup": {
+    "title": "Falta conectar Supabase",
+    "text": "Copia .env.example como .env.local, rellena VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY y reinicia `npm run dev`."
+  },
+  "loading": "Cargando…"
+}

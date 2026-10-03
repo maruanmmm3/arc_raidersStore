@@ -1,0 +1,95 @@
+{
+  "title": {
+    "all": "Tienda",
+    "weapon": "Armas",
+    "blueprint": "Planos",
+    "mod": "Modificaciones",
+    "bundle": "Packs"
+  },
+  "kind": {
+    "weapon": "Arma",
+    "blueprint": "Plano",
+    "mod": "Mod",
+    "bundle": "Pack"
+  },
+  "rarity": {
+    "common": "Común",
+    "uncommon": "Poco común",
+    "rare": "Raro",
+    "epic": "Épico",
+    "legendary": "Legendario"
+  },
+  "weaponType": {
+    "assault_rifle": "Fusil de asalto",
+    "battle_rifle": "Fusil de batalla",
+    "smg": "Subfusil",
+    "shotgun": "Escopeta",
+    "pistol": "Pistola",
+    "hand_cannon": "Revólver",
+    "lmg": "Ametralladora ligera",
+    "sniper": "Francotirador",
+    "special": "Especial"
+  },
+  "slot": {
+    "muzzle": "Bocacha",
+    "optic": "Mira",
+    "barrel": "Cañón",
+    "underbarrel": "Bajo cañón",
+    "magazine": "Cargador",
+    "stock": "Culata",
+    "tech": "Tecnología"
+  },
+  "stats": {
+    "damage": "Daño",
+    "fire_rate": "Cadencia",
+    "range": "Alcance",
+    "stability": "Estabilidad",
+    "magazine": "Cargador"
+  },
+  "tier": "Nivel {{tier}}",
+  "stock": {
+    "in": "En stock",
+    "low": "Quedan {{count}}",
+    "out": "Agotado"
+  },
+  "filters": {
+    "title": "Filtros",
+    "search": "Buscar por nombre",
+    "kind": "Categoría",
+    "allKinds": "Todo",
+    "type": "Tipo de arma",
+    "anyType": "Cualquiera",
+    "rarity": "Rareza",
+    "price": "Precio",
+    "min": "Mín.",
+    "max": "Máx.",
+    "sort": "Ordenar",
+    "clear": "Limpiar filtros"
+  },
+  "sort": {
+    "featured": "Destacados",
+    "price_asc": "Precio: menor a mayor",
+    "price_desc": "Precio: mayor a menor",
+    "rarity_desc": "Rareza: mayor primero",
+    "newest": "Novedades"
+  },
+  "results_one": "{{count}} producto",
+  "results_other": "{{count}} productos",
+  "empty": "No hay productos con estos filtros.",
+  "page": "Página {{page}} de {{pages}}",
+  "prev": "Anterior",
+  "next": "Siguiente",
+  "detail": {
+    "back": "Volver a la tienda",
+    "addToCart": "Añadir al carrito",
+    "added": "Añadido al carrito",
+    "mods": "Modificaciones compatibles",
+    "modsHint": "Elige como máximo una por ranura. Se entregan montadas con el arma.",
+    "none": "Ninguna",
+    "includes": "Incluye",
+    "unlocks": "Desbloquea",
+    "total": "Total con mods",
+    "notFound": "Este producto no existe o ya no está disponible.",
+    "deliveryNote": "Al confirmar el pedido eliges día y hora para recibirlo en una partida con nuestro staff."
+  }
+}

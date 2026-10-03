@@ -1,0 +1,313 @@
+{
+  "updated": "Última actualización: 3 de octubre de 2026",
+  "demoNotice": "Speranza Supply es un proyecto demo con fines de aprendizaje: no se venden objetos reales ni se cobra dinero. Estos textos son una plantilla y no constituyen asesoramiento legal.",
+  "toc": "En esta página",
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "lede": "En ARC Raiders no hay mercado ni pantalla de intercambio: un objeto solo pasa de un jugador a otro si se suelta durante una partida. Por eso cada entrega es una partida juntos, en el día y la hora que tú eliges.",
+    "steps": [
+      {
+        "title": "Elige lo que necesitas",
+        "text": "Armas con sus modificaciones, planos o packs ya configurados. El precio que ves es orientativo: el definitivo lo calcula el servidor al confirmar."
+      },
+      {
+        "title": "Reserva tu cita",
+        "text": "Indicas tu ID de Embark y tu plataforma, y eliges un hueco libre en el calendario. Las horas se muestran en tu zona horaria."
+      },
+      {
+        "title": "Recibe tu ticket",
+        "text": "Te damos un código de cita, la sala de Discord y el admin que te atenderá. Puedes añadirlo a tu calendario."
+      },
+      {
+        "title": "Entra a la sala",
+        "text": "A la hora reservada, entra al canal de voz asignado y dile tu código al admin. Si acordasteis el pago por Discord, se cierra antes de empezar."
+      },
+      {
+        "title": "Partida juntos",
+        "text": "Os agregáis en el juego, entráis en escuadra y el admin suelta los objetos en una zona segura. Los recoges y extraes."
+      },
+      {
+        "title": "Entrega confirmada",
+        "text": "Cuando extraes, el admin marca el pedido como entregado y tu ticket queda como completado."
+      },
+      {
+        "title": "Confirma la entrega",
+        "text": "Cuando el admin marca el pedido como entregado, pulsa \"Confirmar que lo he recibido\" en tu ticket. Si algo ha ido mal, no confirmes: reclama con tu grabación."
+      }
+    ],
+    "prepareTitle": "Ten esto preparado",
+    "prepare": [
+      "Tu ID de Embark exacto (Nombre#1234).",
+      "Una cuenta de Discord y haber entrado a nuestro servidor.",
+      "Espacio libre en tu inventario para lo que vas a recibir.",
+      "Unos 30 minutos libres a la hora de la cita.",
+      "Un programa para grabar la partida (por ejemplo, la grabación de Steam, Xbox Game Bar, el botón Crear de PS5 u OBS)."
+    ],
+    "timesTitle": "Plazos",
+    "times": [
+      "Puedes reservar desde 2 horas hasta 14 días antes.",
+      "Cada cita dura 30 minutos.",
+      "Puedes cancelar sin coste hasta 3 horas antes si aún no has pagado.",
+      "Si no entras a la sala en 15 minutos, la cita se marca como no presentada."
+    ],
+    "cta": "Ver la tienda"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "lede": "Si tu duda no está aquí, escríbenos en el canal #soporte de Discord.",
+    "items": [
+      {
+        "q": "¿Cómo recibo lo que compro?",
+        "a": "En una partida con un admin, el día y la hora que reservas. Suelta los objetos en una zona segura, tú los recoges y extraes."
+      },
+      {
+        "q": "¿En qué plataformas entregáis?",
+        "a": "PC (Steam y Epic), PlayStation 5 y Xbox Series X|S. Indícalo en el pedido para que te atienda alguien de tu plataforma."
+      },
+      {
+        "q": "¿Cuándo pago?",
+        "a": "Si eliges \"Acordar por Discord\", cierras el pago con el admin antes de la partida y él lo registra en tu pedido. El pago online aún no está disponible."
+      },
+      {
+        "q": "¿Qué pasa si muero o no consigo extraer?",
+        "a": "Repetimos la entrega una vez sin coste, en una nueva cita."
+      },
+      {
+        "q": "¿Tengo que grabar la partida de entrega?",
+        "a": "Sí, te lo recomendamos siempre. Si pierdes el producto durante la entrega y quieres reclamar, la grabación completa de la partida es la prueba obligatoria. Guárdala al menos 7 días."
+      },
+      {
+        "q": "¿Qué es \"dar conformidad\"?",
+        "a": "Cuando el admin marca tu pedido como entregado, confirmas en tu ticket que lo has recibido. Desde ese momento la entrega queda cerrada y no se aceptan reclamaciones por pérdida. Si algo fue mal, reclama antes de confirmar."
+      },
+      {
+        "q": "¿Y si no puedo ir a mi cita?",
+        "a": "Cancela desde tu ticket hasta 3 horas antes si no has pagado. Si ya pagaste, escríbenos en Discord y buscamos otra hora."
+      },
+      {
+        "q": "¿Cómo sé que hablo con alguien del staff?",
+        "a": "Tu ticket muestra el nombre exacto del admin asignado. El staff nunca te escribe primero por privado ni te pide pagar fuera de lo que indica tu ticket."
+      },
+      {
+        "q": "¿Qué son los planos?",
+        "a": "Desbloquean de forma permanente la fabricación de un arma o modificación en tu taller del juego."
+      },
+      {
+        "q": "¿Las modificaciones vienen montadas?",
+        "a": "Sí: si eliges mods en la ficha de un arma, se entregan montados en ella."
+      },
+      {
+        "q": "¿Puede afectar a mi cuenta del juego?",
+        "a": "Los términos de Embark Studios prohíben intercambiar objetos del juego por algo de valor y prevén sanciones. Léelos antes de comprar."
+      },
+      {
+        "q": "¿Guardáis mis datos?",
+        "a": "Solo los necesarios para gestionar tu cuenta y tus pedidos. Lo explicamos en la política de privacidad."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Términos y condiciones",
+    "lede": "Estas condiciones regulan el uso de Speranza Supply y la reserva de entregas.",
+    "sections": [
+      {
+        "title": "Quiénes somos",
+        "body": [
+          "Speranza Supply es un proyecto de fans sin relación con Embark Studios AB. ARC Raiders y sus elementos son marcas y propiedad de Embark Studios.",
+          "En su versión actual es un proyecto demo: los pedidos no generan ningún cargo y no se entregan objetos reales."
+        ]
+      },
+      {
+        "title": "Tu cuenta",
+        "body": [
+          "Para hacer un pedido necesitas una cuenta. Eres responsable de mantener tu contraseña en secreto y de que los datos que indicas (ID de Embark, plataforma) sean correctos.",
+          "Podemos bloquear cuentas que hagan reservas falsas, no se presenten de forma reiterada o traten mal al staff."
+        ]
+      },
+      {
+        "title": "Pedidos y precios",
+        "body": [
+          "Los precios se muestran en la moneda indicada. El importe definitivo se calcula en nuestro servidor al confirmar el pedido y es el que aparece en tu ticket.",
+          "La disponibilidad depende del stock en el momento de confirmar. Las unidades quedan reservadas para tu pedido hasta la entrega o la cancelación."
+        ]
+      },
+      {
+        "title": "Citas y entrega",
+        "body": [
+          "La entrega se realiza en una partida conjunta en la cita reservada. Debes entrar a la sala de Discord asignada a la hora indicada y seguir las instrucciones del admin.",
+          "Si no te presentas en 15 minutos, la cita se marca como no presentada. Si la entrega falla por causas del juego (muerte, desconexión), se repite una vez sin coste."
+        ]
+      },
+      {
+        "title": "Grabación de la partida y reclamaciones",
+        "body": [
+          "Te pedimos que grabes en vídeo la partida de entrega completa: desde que entras en la escuadra con el admin hasta que extraes. El vídeo debe verse sin cortes y mostrar tu inventario al recoger los objetos y al extraer.",
+          "Si pierdes el producto durante la partida de entrega o no lo recibes, puedes reclamar en un plazo de 24 horas desde la hora de tu cita. Escríbenos en #soporte de Discord con tu código de cita y un enlace a la grabación (YouTube oculto, Google Drive, Medal u otro servicio). Guarda el vídeo al menos 7 días.",
+          "La grabación es la prueba principal para resolver la reclamación. Sin ella no podemos tramitar reclamaciones por pérdida o falta de entrega, salvo que nuestro propio registro de la entrega demuestre el fallo.",
+          "El staff también puede grabar la entrega como prueba. Ambas grabaciones se usan solo para resolver la reclamación."
+        ]
+      },
+      {
+        "title": "Conformidad de entrega",
+        "body": [
+          "Cuando el admin marca tu pedido como entregado, en tu ticket aparece el botón \"Confirmar que lo he recibido\". Al pulsarlo das tu conformidad: confirmas que has extraído con los objetos del pedido.",
+          "Una vez das conformidad, la entrega se considera completada y ya no se aceptan reclamaciones por pérdida o falta de entrega. Lo que pase con los objetos en partidas posteriores no forma parte de la entrega.",
+          "Si algo ha ido mal, no des conformidad: reclama primero siguiendo el apartado anterior."
+        ]
+      },
+      {
+        "title": "Pagos",
+        "body": [
+          "En el modo \"Acordar por Discord\", el pago se cierra con el admin antes de la partida y queda registrado en tu pedido con una referencia. Nunca pagues un importe distinto al de tu ticket."
+        ]
+      },
+      {
+        "title": "Cancelaciones y reembolsos",
+        "body": [
+          "Las condiciones de cancelación y reembolso están en la política de reembolsos, que forma parte de estos términos."
+        ]
+      },
+      {
+        "title": "Relación con ARC Raiders",
+        "body": [
+          "Los términos de servicio de Embark Studios prohíben intercambiar objetos del juego por algo de valor y contemplan sanciones sobre las cuentas implicadas. Al usar este servicio declaras conocer ese riesgo.",
+          "No tenemos control sobre el juego: cambios, reinicios de progreso o sanciones de Embark quedan fuera de nuestra responsabilidad."
+        ]
+      },
+      {
+        "title": "Responsabilidad",
+        "body": [
+          "Prestamos el servicio con diligencia, pero no garantizamos que esté disponible sin interrupciones. Nuestra responsabilidad se limita, como máximo, al importe pagado por el pedido afectado."
+        ]
+      },
+      {
+        "title": "Cambios",
+        "body": [
+          "Podemos actualizar estas condiciones. Publicaremos la fecha de la última actualización y, si el cambio es importante, lo avisaremos en Discord."
+        ]
+      },
+      {
+        "title": "Contacto",
+        "body": [
+          "Para cualquier duda sobre estas condiciones, escríbenos por los canales de la página de contacto."
+        ]
+      }
+    ]
+  },
+  "refunds": {
+    "title": "Política de reembolsos",
+    "lede": "Queremos que cada entrega salga bien. Si no es así, esto es lo que hacemos.",
+    "sections": [
+      {
+        "title": "Cancelación sin coste",
+        "body": [
+          "Puedes cancelar tu pedido desde el ticket hasta 3 horas antes de la cita si aún no has pagado. La cita y el stock reservado se liberan al momento."
+        ]
+      },
+      {
+        "title": "Reembolso completo",
+        "body": [
+          "Si ya pagaste y no podemos entregar (falta de stock, ningún admin disponible o un fallo nuestro), te devolvemos el importe completo.",
+          "Si no podemos atenderte en tu cita y no aceptas otra hora, también te devolvemos el importe completo."
+        ]
+      },
+      {
+        "title": "Entrega fallida",
+        "body": [
+          "Si mueres o no consigues extraer durante la entrega, la repetimos una vez sin coste en una nueva cita. A partir del segundo intento fallido valoramos cada caso.",
+          "Si el problema no se resolvió en la propia cita y quieres reclamar después, necesitas la grabación de la partida (ver \"Reclamaciones por pérdida\")."
+        ]
+      },
+      {
+        "title": "Reclamaciones por pérdida",
+        "body": [
+          "Plazo: 24 horas desde la hora de tu cita, y siempre antes de dar conformidad de la entrega.",
+          "Prueba obligatoria: la grabación completa de la partida de entrega, sin cortes, desde que entras en la escuadra hasta que extraes.",
+          "Con la grabación revisada, si se confirma que no recibiste el producto por causa nuestra, repetimos la entrega o te devolvemos el importe."
+        ]
+      },
+      {
+        "title": "No presentado",
+        "body": [
+          "Si no entras a la sala en 15 minutos, puedes reservar una nueva cita una vez. Si vuelves a faltar, el pedido se cancela y, si pagaste, se devuelve el importe menos los costes de gestión que se te hayan indicado antes de pagar."
+        ]
+      },
+      {
+        "title": "Cuando no hay reembolso",
+        "body": [
+          "Una vez das conformidad de la entrega en tu ticket (o has extraído con los objetos) no hay reembolso.",
+          "Tampoco si reclamas por pérdida sin la grabación de la partida, fuera del plazo de 24 horas, o si no podemos entregar porque tu cuenta del juego ha sido sancionada o el ID de Embark que indicaste era incorrecto y no lo corregiste a tiempo."
+        ]
+      },
+      {
+        "title": "Cómo pedirlo",
+        "body": [
+          "Escríbenos en #soporte de Discord con tu código de cita. Respondemos en menos de 48 horas. El reembolso se hace por el mismo medio con el que pagaste."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "lede": "Qué datos guardamos, para qué y qué control tienes sobre ellos.",
+    "sections": [
+      {
+        "title": "Datos que recogemos",
+        "body": [
+          "Cuenta: email, nombre de usuario e idioma preferido. Si entras con Discord, tu ID y nombre de usuario de Discord.",
+          "Pedidos: ID de Embark, plataforma, región, nota opcional, productos, importes, cita reservada, estado del pago y del pedido."
+        ]
+      },
+      {
+        "title": "Para qué los usamos",
+        "body": [
+          "Para gestionar tu cuenta, preparar y entregar tus pedidos, coordinar la cita en Discord, atenderte en soporte y prevenir abusos. No vendemos tus datos ni los usamos para publicidad."
+        ]
+      },
+      {
+        "title": "Quién los ve",
+        "body": [
+          "Solo el staff de Speranza Supply, y únicamente lo necesario para atender tu pedido. El admin asignado ve tu ID de Embark, tu usuario de Discord y lo que has pedido."
+        ]
+      },
+      {
+        "title": "Dónde se guardan",
+        "body": [
+          "En Supabase (base de datos y autenticación). Las contraseñas no se guardan en texto plano: las gestiona Supabase Auth."
+        ]
+      },
+      {
+        "title": "Almacenamiento en tu navegador",
+        "body": [
+          "Guardamos en tu navegador tu sesión, el contenido del carrito y el idioma elegido. No usamos cookies de publicidad ni de seguimiento."
+        ]
+      },
+      {
+        "title": "Cuánto tiempo",
+        "body": [
+          "Los datos de cuenta, mientras la mantengas. Los pedidos, el tiempo necesario para atender reclamaciones y cumplir obligaciones legales."
+        ]
+      },
+      {
+        "title": "Tus derechos",
+        "body": [
+          "Puedes ver y corregir tus datos en Mi cuenta. Para pedir una copia o el borrado de tu cuenta, escríbenos por los canales de contacto."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "lede": "La forma más rápida de hablar con nosotros es Discord. Ten a mano tu código de cita si tu consulta es sobre un pedido.",
+    "discordTitle": "Discord",
+    "discordText": "Canal #soporte para dudas y problemas con pedidos. Respondemos en menos de 48 horas.",
+    "discordCta": "Unirme al Discord",
+    "discordMissing": "El enlace de invitación aún no está configurado.",
+    "emailTitle": "Email",
+    "emailText": "Para temas de privacidad o si no usas Discord.",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "safetyTitle": "Para tu seguridad",
+    "safety": "El staff nunca te escribe primero por mensaje privado ni te pide contraseñas. Si alguien lo hace, avísanos en #soporte."
+  }
+}
