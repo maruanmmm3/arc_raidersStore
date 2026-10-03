@@ -12,9 +12,9 @@ export function buildIcs({ code, start, end, title, description, url }) {
   return [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//Speranza Supply//Citas//ES',
+    'PRODID:-//El Botín Express//Citas//ES',
     'BEGIN:VEVENT',
-    `UID:${code}@speranza-supply`,
+    `UID:${code}@el-botin-express`,
     `DTSTAMP:${icsDate(new Date().toISOString())}`,
     `DTSTART:${icsDate(start)}`,
     `DTEND:${icsDate(end)}`,

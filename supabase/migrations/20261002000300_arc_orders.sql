@@ -3,7 +3,7 @@
 
 create table public."ARC_orders" (
   id                  uuid primary key default gen_random_uuid(),
-  number              bigint generated always as identity (start with 1001) unique,  -- se muestra como SS-001001
+  number              bigint generated always as identity (start with 1001) unique,  -- se muestra como BX-001001
   user_id             uuid not null,
   status              public.arc_order_status not null default 'requested',
   payment_mode        public.arc_payment_mode not null,

@@ -52,7 +52,7 @@
     "cancelNo": "No",
     "cancelError": "No se puede cancelar: queda poco para la cita o el pedido ya avanzó. Escríbenos en Discord.",
     "notFound": "No encontramos esta cita en tu cuenta.",
-    "calendarTitle": "Entrega Speranza Supply · {{code}}",
+    "calendarTitle": "Entrega El Botín Express · {{code}}",
     "step4": "Graba la partida completa, desde que entras en la escuadra hasta que extraes. Es tu prueba si necesitas reclamar.",
     "confirmTitle": "¿Has recibido tu pedido?",
     "confirmText": "El admin ha marcado tu pedido como entregado. Si has extraído con todo lo que pediste, confírmalo. Si algo ha ido mal, no confirmes: reclama en #soporte de Discord en las próximas 24 horas con la grabación de la partida.",

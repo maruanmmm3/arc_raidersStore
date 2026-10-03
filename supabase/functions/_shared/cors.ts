@@ -1,5 +1,5 @@
-// Orígenes permitidos: secreto ALLOWED_ORIGINS="https://tu-dominio.com,http://localhost:5173"
-const allowed = (Deno.env.get('ALLOWED_ORIGINS') ?? 'http://localhost:5173,http://127.0.0.1:5173')
+// Orígenes permitidos: secreto ARC_ALLOWED_ORIGINS="https://tu-dominio.com,http://localhost:5173"
+const allowed = (Deno.env.get('ARC_ALLOWED_ORIGINS') ?? 'http://localhost:5173,http://127.0.0.1:5173')
   .split(',')
   .map((o) => o.trim())
   .filter(Boolean)

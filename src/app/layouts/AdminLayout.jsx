@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
+import { NewOrdersAlert } from '@/features/admin/NewOrdersAlert'
 
 // Textos del admin en español por ahora; el namespace "admin" de i18n llega en la fase 2
 const sections = [
@@ -23,7 +24,7 @@ export function AdminLayout() {
       <aside className="border-b border-carbon-600 bg-carbon-900 md:w-56 md:shrink-0 md:border-b-0 md:border-r">
         <div className="stripe" />
         <div className="flex items-center justify-between px-4 py-4">
-          <Link to="/" className="font-display text-xl font-extrabold uppercase">Speranza · Admin</Link>
+          <Link to="/" className="font-display text-xl font-extrabold uppercase">El Botín · Admin</Link>
         </div>
         <nav className="flex gap-1 overflow-x-auto px-2 pb-3 md:flex-col md:overflow-visible" aria-label="Administración">
           {sections.map((s) => (
@@ -40,7 +41,8 @@ export function AdminLayout() {
           ))}
         </nav>
       </aside>
-      <main className="min-w-0 flex-1 px-4 py-8 md:px-8">
+      <main className="flex min-w-0 flex-1 flex-col gap-6 px-4 py-8 md:px-8">
+        <NewOrdersAlert />
         <Outlet />
       </main>
     </div>

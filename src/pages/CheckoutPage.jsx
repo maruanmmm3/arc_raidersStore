@@ -17,9 +17,12 @@ import { OrderError, createOrder } from '@/features/orders/api'
 
 const PLATFORMS = ['pc_steam', 'pc_epic', 'ps5', 'xbox']
 const REGIONS = ['latam', 'na', 'eu', 'asia', 'oce']
+const DISCORD_RE = /^@?(?!.*\.\.)[a-z0-9_.]{2,32}$/
 
 const detailsSchema = z.object({
   embarkId: z.string().trim().regex(/^[^#\s]{2,32}#[0-9]{3,6}$/, 'embarkId'),
+  // Usuario de Discord actual: minúsculas, números, "_" y "." (sin "..")
+  discordUsername: z.string().trim().toLowerCase().regex(DISCORD_RE, 'discord'),
   platform: z.enum(PLATFORMS, 'platform'),
   region: z.enum(REGIONS),
   note: z.string().trim().max(500),
@@ -49,6 +52,9 @@ function DetailsStep({ form, setForm, onNext, onlineEnabled }) {
     <form onSubmit={submit} noValidate className="flex flex-col gap-5">
       <Field label={t('details.embarkId')} hint={t('details.embarkIdHint')} error={errors.embarkId && t('details.errors.embarkId')}>
         {(p) => <Input {...p} value={form.embarkId} onChange={set('embarkId')} placeholder="Raider#1234" autoComplete="off" />}
+      </Field>
+      <Field label={t('details.discord')} hint={t('details.discordHint')} error={errors.discordUsername && t('details.errors.discord')}>
+        {(p) => <Input {...p} value={form.discordUsername} onChange={set('discordUsername')} placeholder="raider_pe" autoComplete="off" autoCapitalize="none" />}
       </Field>
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label={t('details.platform')} error={errors.platform && t('details.errors.platform')}>
@@ -142,11 +148,13 @@ export function CheckoutPage() {
   const [step, setStep] = useState('details')
   const [form, setForm] = useState(() => ({
     embarkId: profile?.embark_id ?? '',
+    // El nombre que trae el login de Discord puede ser el visible (con espacios): solo se usa si es un usuario válido
+    discordUsername: DISCORD_RE.test(profile?.discord_username ?? '') ? profile.discord_username : '',
     platform: profile?.platform ?? '',
     region: 'latam',
     note: '',
     paymentMode: 'discord',
-    saveToProfile: !profile?.embark_id,
+    saveToProfile: !profile?.embark_id || !profile?.discord_username,
     acceptTerms: false,
   }))
   const [slot, setSlot] = useState(null)
@@ -170,6 +178,7 @@ export function CheckoutPage() {
       const result = await createOrder({
         items: cart.lines.map((l) => ({ productId: l.productId, qty: l.qty, modIds: l.mods.map((m) => m.id) })),
         embarkId: form.embarkId.trim(),
+        discordUsername: form.discordUsername.trim().replace(/^@/, '').toLowerCase(),
         platform: form.platform,
         region: form.region,
         note: form.note.trim() || undefined,

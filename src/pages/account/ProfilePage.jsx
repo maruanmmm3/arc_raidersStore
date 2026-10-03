@@ -11,6 +11,9 @@ import { useAuth } from '@/features/auth/AuthContext'
 const PLATFORMS = ['pc_steam', 'pc_epic', 'ps5', 'xbox']
 
 // Mismas reglas que los checks de la tabla profiles
+// Usuario de Discord actual: minúsculas, números, "_" y "." (sin "..")
+const DISCORD_RE = /^@?(?!.*\.\.)[a-z0-9_.]{2,32}$/
+
 const profileSchema = z.object({
   username: z.string().regex(/^[A-Za-z0-9_]{3,32}$/, 'username'),
   embark_id: z
@@ -19,6 +22,7 @@ const profileSchema = z.object({
     .regex(/^[^#\s]{2,32}#[0-9]{3,6}$/, 'embarkId')
     .or(z.literal('')),
   platform: z.enum(PLATFORMS).or(z.literal('')),
+  discord_username: z.string().trim().toLowerCase().regex(DISCORD_RE, 'discord').or(z.literal('')),
   locale: z.enum(LANGUAGES),
 })
 
@@ -29,6 +33,7 @@ function ProfileForm({ profile }) {
     username: profile.username ?? '',
     embark_id: profile.embark_id ?? '',
     platform: profile.platform ?? '',
+    discord_username: profile.discord_username ?? '',
     locale: profile.locale ?? 'es',
   })
   const [errors, setErrors] = useState({})
@@ -54,6 +59,7 @@ function ProfileForm({ profile }) {
         username: values.username,
         embark_id: values.embark_id || null,
         platform: values.platform || null,
+        discord_username: values.discord_username.replace(/^@/, '') || null,
         locale: values.locale,
       })
       .eq('id', profile.id)
@@ -95,14 +101,13 @@ function ProfileForm({ profile }) {
           </Select>
         )}
       </Field>
-      <div className="flex flex-col gap-1.5">
-        <span className="text-sm font-medium text-concrete-300">{t('profile.discord')}</span>
-        <p className="text-sm text-concrete-400">
-          {profile.discord_username
-            ? t('profile.discordLinked', { name: profile.discord_username })
-            : t('profile.discordNotLinked')}
-        </p>
-      </div>
+      <Field
+        label={t('profile.discord')}
+        hint={profile.discord_id ? t('profile.discordLinkedHint') : t('profile.discordHint')}
+        error={errors.discord_username && t('profile.errors.discord')}
+      >
+        {(p) => <Input {...p} value={form.discord_username} onChange={set('discord_username')} placeholder="raider_pe" autoCapitalize="none" />}
+      </Field>
       {status === 'saved' && <Alert tone="success">{t('profile.saved')}</Alert>}
       {status === 'taken' && <Alert>{t('profile.errors.usernameTaken')}</Alert>}
       {status === 'error' && <Alert>{t('auth:errors.generic')}</Alert>}

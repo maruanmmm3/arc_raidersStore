@@ -1,14 +1,16 @@
-// Crea un pedido con su cita de entrega.
+// Crea un pedido con su cita de entrega y avisa al staff en Discord.
 // El navegador solo envía IDs, cantidades, mods elegidos y datos del jugador: el precio,
 // el stock y el hueco se validan y calculan en la función SQL arc_create_order.
-import { createClient } from 'npm:@supabase/supabase-js@2'
+import { createClient, type SupabaseClient } from 'npm:@supabase/supabase-js@2'
 import { z } from 'npm:zod@4'
 import { corsHeaders, json } from '../_shared/cors.ts'
 
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!
 const ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY')!
 const SERVICE_ROLE_KEY = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
-const DISCORD_WEBHOOK_URL = Deno.env.get('DISCORD_WEBHOOK_URL')
+const DISCORD_WEBHOOK_URL = Deno.env.get('ARC_DISCORD_WEBHOOK_URL')
+
+const PLATFORMS = { pc_steam: 'PC (Steam)', pc_epic: 'PC (Epic)', ps5: 'PS5', xbox: 'Xbox' } as const
 
 const Body = z.object({
   items: z
@@ -22,6 +24,7 @@ const Body = z.object({
     .min(1)
     .max(20),
   embarkId: z.string().trim().regex(/^[^#\s]{2,32}#[0-9]{3,6}$/),
+  discordUsername: z.string().trim().min(2).max(33),
   platform: z.enum(['pc_steam', 'pc_epic', 'ps5', 'xbox']),
   region: z.string().trim().max(40).optional(),
   note: z.string().trim().max(500).optional(),
@@ -35,27 +38,73 @@ function mapError(message: string): { status: number; code: string } {
   if (message.startsWith('ARC_OUT_OF_STOCK')) return { status: 409, code: 'out_of_stock' }
   if (message.startsWith('ARC_SLOT_TAKEN')) return { status: 409, code: 'slot_taken' }
   if (message.startsWith('ARC_BLOCKED')) return { status: 403, code: 'blocked' }
+  if (message.startsWith('ARC_INVALID_DISCORD')) return { status: 400, code: 'invalid_discord' }
   if (message.startsWith('ARC_ONLINE_PAYMENT_DISABLED')) return { status: 400, code: 'online_disabled' }
   if (message.startsWith('ARC_')) return { status: 400, code: 'invalid_order' }
   return { status: 500, code: 'server_error' }
 }
 
-async function notifyDiscord(admin: ReturnType<typeof createClient>, result: Record<string, unknown>, username: string) {
+const orderNumber = (n: number) => `BX-${String(n).padStart(6, '0')}`
+const money = (cents: number) => `$${(cents / 100).toFixed(2)}`
+
+// Aviso al canal privado del staff con todo lo necesario para contactar al comprador
+async function notifyDiscord(
+  admin: SupabaseClient,
+  result: { order_id: string; number: number; ticket_code: string; total_cents: number; slot_start: string },
+  body: z.infer<typeof Body>,
+  username: string,
+  siteOrigin: string | null,
+) {
   if (!DISCORD_WEBHOOK_URL) return
   try {
-    const { data: tz } = await admin.from('ARC_settings').select('value').eq('key', 'store_timezone').single()
+    const [{ data: tz }, { data: items }, { data: appt }] = await Promise.all([
+      admin.from('ARC_settings').select('value').eq('key', 'store_timezone').single(),
+      admin.from('ARC_order_items').select('id, parent_item_id, names, qty').eq('order_id', result.order_id),
+      admin
+        .from('ARC_appointments')
+        .select('room:ARC_discord_rooms ( name ), admin:ARC_profiles!arc_appointments_admin_fk ( username, discord_username )')
+        .eq('order_id', result.order_id)
+        .single(),
+    ])
+
     const when = new Intl.DateTimeFormat('es', {
-      dateStyle: 'full',
-      timeStyle: 'short',
+      weekday: 'long', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit',
       timeZone: (tz?.value as string) || 'America/Lima',
-    }).format(new Date(result.slot_start as string))
-    const total = ((result.total_cents as number) / 100).toFixed(2)
+    }).format(new Date(result.slot_start))
+
+    const name = (i: { names: Record<string, string> }) => i.names?.es ?? Object.values(i.names ?? {})[0] ?? '?'
+    const lines = (items ?? [])
+      .filter((i) => !i.parent_item_id)
+      .map((i) => {
+        const mods = (items ?? []).filter((m) => m.parent_item_id === i.id).map(name)
+        return `${i.qty > 1 ? `${i.qty} × ` : ''}${name(i)}${mods.length ? ` (+ ${mods.join(', ')})` : ''}`
+      })
+
+    const discord = body.discordUsername.replace(/^@/, '').toLowerCase()
+    const staff = appt?.admin as { username?: string; discord_username?: string } | null
+    const room = (appt?.room as { name?: string } | null)?.name ?? '—'
+    const fields = [
+      { name: '👤 Cliente', value: `${username}\nDiscord: **@${discord}**`, inline: true },
+      { name: '🎮 Jugador', value: `\`${body.embarkId}\`\n${PLATFORMS[body.platform]}${body.region ? ` · ${body.region}` : ''}`, inline: true },
+      { name: '📦 Productos', value: lines.join('\n').slice(0, 1000) || '—' },
+      { name: '💰 Total', value: `${money(result.total_cents)} · ${body.paymentMode === 'discord' ? 'acordar por Discord' : 'pago online'}`, inline: true },
+      { name: '📅 Cita', value: `${when}\n${room} · atiende ${staff?.discord_username || staff?.username || '—'}`, inline: true },
+    ]
+    if (body.note) fields.push({ name: '📝 Nota', value: body.note.slice(0, 500), inline: false })
+
     await fetch(DISCORD_WEBHOOK_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        content: `🎟️ **Nueva cita** · Pedido SS-${String(result.number).padStart(6, '0')} · ${username}\n` +
-          `📅 ${when} · Ticket \`${result.ticket_code}\` · Total ${total}`,
+        content: `🛒 **Nueva compra ${orderNumber(result.number)}** · contacta a **@${discord}**`,
+        allowed_mentions: { parse: [] }, // no menciona a nadie por accidente
+        embeds: [{
+          title: `Ticket ${result.ticket_code}`,
+          url: siteOrigin ? `${siteOrigin}/admin/agenda` : undefined,
+          color: 0xd9442a,
+          fields,
+          timestamp: new Date().toISOString(),
+        }],
       }),
     })
   } catch (err) {
@@ -98,6 +147,7 @@ Deno.serve(async (req) => {
     p_note: body.note ?? null,
     p_payment_mode: body.paymentMode,
     p_slot_start: body.slotStart,
+    p_discord_username: body.discordUsername,
   })
 
   if (error) {
@@ -109,10 +159,17 @@ Deno.serve(async (req) => {
   }
 
   if (body.saveToProfile) {
-    await admin.from('ARC_profiles').update({ embark_id: body.embarkId, platform: body.platform }).eq('id', user.id)
+    await admin
+      .from('ARC_profiles')
+      .update({
+        embark_id: body.embarkId,
+        platform: body.platform,
+        discord_username: body.discordUsername.replace(/^@/, '').toLowerCase(),
+      })
+      .eq('id', user.id)
   }
 
-  await notifyDiscord(admin, result, (profile as { username: string }).username)
+  await notifyDiscord(admin, result, body, (profile as { username: string }).username, req.headers.get('origin'))
 
   return json(req, result, 201)
 })

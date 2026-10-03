@@ -14,14 +14,15 @@
     "noPlatform": "Not set",
     "language": "Language",
     "discord": "Discord",
-    "discordLinked": "Linked as {{name}}",
-    "discordNotLinked": "Not linked. Sign in with Discord to link it.",
     "save": "Save changes",
     "saved": "Changes saved.",
     "errors": {
       "embarkId": "Use the format Name#1234.",
-      "usernameTaken": "That username is already taken."
-    }
+      "usernameTaken": "That username is already taken.",
+      "discord": "Use your Discord username: 2 to 32 characters, lowercase letters, numbers, \"_\" or \".\"."
+    },
+    "discordHint": "Your Discord username (not your display name). We use it to contact you for deliveries.",
+    "discordLinkedHint": "Linked through Discord sign-in. You can fix it if it does not match your username."
   },
   "platform": {
     "pc_steam": "PC (Steam)",

@@ -52,7 +52,7 @@
     "cancelNo": "No",
     "cancelError": "It cannot be cancelled: the appointment is too close or the order has moved on. Message us on Discord.",
     "notFound": "We could not find this appointment in your account.",
-    "calendarTitle": "Speranza Supply delivery · {{code}}",
+    "calendarTitle": "El Botín Express delivery · {{code}}",
     "step4": "Record the full match, from joining the squad until you extract. It is your evidence if you need to file a claim.",
     "confirmTitle": "Did you receive your order?",
     "confirmText": "The admin marked your order as delivered. If you extracted with everything you ordered, confirm it. If something went wrong, do not confirm: file a claim in #support on Discord within 24 hours with the match recording.",

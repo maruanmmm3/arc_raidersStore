@@ -1,0 +1,24 @@
+# Configuración de Netlify para la SPA de Vite.
+# Las variables VITE_* se definen en Netlify: Site configuration → Environment variables.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# React Router maneja las rutas en el navegador: cualquier URL (/tienda, /cita/XXXX…)
+# debe servir index.html para que recargar la página no dé 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cabeceras de seguridad básicas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -20,5 +20,5 @@ export function localDayKey(iso, timeZone) {
 }
 
 export function orderNumber(n) {
-  return `SS-${String(n).padStart(6, '0')}`
+  return `BX-${String(n).padStart(6, '0')}`
 }

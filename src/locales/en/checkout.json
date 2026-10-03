@@ -20,7 +20,7 @@
     },
     "note": "Note for the admin (optional)",
     "notePlaceholder": "For example: I prefer to speak Spanish",
-    "saveToProfile": "Save ID and platform to my profile",
+    "saveToProfile": "Save Embark ID, Discord and platform to my profile",
     "paymentMode": "How do you want to pay?",
     "payDiscord": "Arrange on Discord",
     "payDiscordHint": "Book your slot now and settle payment with the admin before the match.",
@@ -31,9 +31,12 @@
     "errors": {
       "embarkId": "Use the format Name#1234.",
       "platform": "Choose your platform.",
-      "terms": "You need to accept the terms to continue."
+      "terms": "You need to accept the terms to continue.",
+      "discord": "Enter your Discord username: 2 to 32 characters, lowercase letters, numbers, \"_\" or \".\"."
     },
-    "recordingNotice": "Record the full delivery match. If you lose the product and want to file a claim, the recording is the required evidence (24-hour deadline)."
+    "recordingNotice": "Record the full delivery match. If you lose the product and want to file a claim, the recording is the required evidence (24-hour deadline).",
+    "discord": "Discord username",
+    "discordHint": "We contact you here to arrange the delivery. Your username (not your display name), for example raider_pe."
   },
   "slot": {
     "title": "Pick a day and time",
@@ -56,6 +59,7 @@
     "online_disabled": "Online payment is not available right now.",
     "invalid_order": "Check your order details: something is not valid.",
     "unauthorized": "Your session expired. Please sign in again.",
-    "generic": "The order could not be created. Please try again."
+    "generic": "The order could not be created. Please try again.",
+    "invalid_discord": "The Discord username is not valid. Check it in your details."
   }
 }

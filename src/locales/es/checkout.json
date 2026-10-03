@@ -20,7 +20,7 @@
     },
     "note": "Nota para el admin (opcional)",
     "notePlaceholder": "Por ejemplo: prefiero hablar en inglés",
-    "saveToProfile": "Guardar ID y plataforma en mi perfil",
+    "saveToProfile": "Guardar ID de Embark, Discord y plataforma en mi perfil",
     "paymentMode": "¿Cómo quieres pagar?",
     "payDiscord": "Acordar por Discord",
     "payDiscordHint": "Reservas tu cita ahora y cierras el pago con el admin antes de la partida.",
@@ -31,9 +31,12 @@
     "errors": {
       "embarkId": "Usa el formato Nombre#1234.",
       "platform": "Elige tu plataforma.",
-      "terms": "Tienes que aceptar los términos para continuar."
+      "terms": "Tienes que aceptar los términos para continuar.",
+      "discord": "Escribe tu usuario de Discord: 2 a 32 caracteres, minúsculas, números, \"_\" o \".\"."
     },
-    "recordingNotice": "Graba la partida de entrega completa. Si pierdes el producto y quieres reclamar, la grabación es la prueba obligatoria (plazo de 24 horas)."
+    "recordingNotice": "Graba la partida de entrega completa. Si pierdes el producto y quieres reclamar, la grabación es la prueba obligatoria (plazo de 24 horas).",
+    "discord": "Usuario de Discord",
+    "discordHint": "Te contactamos por aquí para coordinar la entrega. Es tu nombre de usuario (no el visible), por ejemplo raider_pe."
   },
   "slot": {
     "title": "Elige día y hora",
@@ -56,6 +59,7 @@
     "online_disabled": "El pago online no está disponible ahora mismo.",
     "invalid_order": "Revisa los datos del pedido: algo no es válido.",
     "unauthorized": "Tu sesión ha caducado. Vuelve a entrar.",
-    "generic": "No se ha podido crear el pedido. Inténtalo de nuevo."
+    "generic": "No se ha podido crear el pedido. Inténtalo de nuevo.",
+    "invalid_discord": "El usuario de Discord no es válido. Revísalo en tus datos."
   }
 }

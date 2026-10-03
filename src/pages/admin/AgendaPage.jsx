@@ -4,6 +4,7 @@ import { formatPrice } from '@/lib/money'
 import { formatTime, localDayKey, orderNumber } from '@/lib/dates'
 import { Button } from '@/components/ui/Button'
 import { Alert } from '@/components/ui/Field'
+import { CopyText } from '@/components/ui/CopyText'
 import { ErrorState, PageLoader } from '@/components/ui/PageLoader'
 import { adminErrorMessage, useAgenda, useAgendaAction } from '@/features/admin/agendaApi'
 import { itemName, nestItems } from '@/features/orders/api'
@@ -97,9 +98,10 @@ function AppointmentCard({ appt }) {
           <p className="text-concrete-400">
             {t(`account:platform.${order.platform}`)}{order.region ? ` · ${order.region}` : ''}
           </p>
-          <p className="text-concrete-400">
-            {order.buyer?.username}{order.discord_username ? ` · Discord: ${order.discord_username}` : ''}
-          </p>
+          <p className="text-concrete-400">{order.buyer?.username}</p>
+          {order.discord_username && (
+            <CopyText text={`@${order.discord_username}`} label="Copiar" className="text-monitor" />
+          )}
         </div>
         <div>
           <p className="label">{orderNumber(order.number)}</p>

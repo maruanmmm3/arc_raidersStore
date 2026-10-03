@@ -14,14 +14,15 @@
     "noPlatform": "Sin elegir",
     "language": "Idioma",
     "discord": "Discord",
-    "discordLinked": "Vinculado como {{name}}",
-    "discordNotLinked": "Sin vincular. Entra con Discord para vincularlo.",
     "save": "Guardar cambios",
     "saved": "Cambios guardados.",
     "errors": {
       "embarkId": "Usa el formato Nombre#1234.",
-      "usernameTaken": "Ese nombre de usuario ya está en uso."
-    }
+      "usernameTaken": "Ese nombre de usuario ya está en uso.",
+      "discord": "Usa tu usuario de Discord: 2 a 32 caracteres, minúsculas, números, \"_\" o \".\"."
+    },
+    "discordHint": "Tu nombre de usuario de Discord (no el visible). Lo usamos para contactarte en las entregas.",
+    "discordLinkedHint": "Vinculado con el login de Discord. Puedes corregirlo si no coincide con tu nombre de usuario."
   },
   "platform": {
     "pc_steam": "PC (Steam)",

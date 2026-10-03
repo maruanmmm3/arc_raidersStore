@@ -1,4 +1,4 @@
-# Speranza Supply
+# El Botín Express
 
 Tienda demo de armas, modificaciones y planos de ARC Raiders con entrega por cita en Discord.
 React + Vite, Supabase (Auth, Postgres, Storage, Edge Functions), Tailwind CSS, TanStack Query y react-i18next.
@@ -71,14 +71,14 @@ src/
 
 | Función | Qué hace |
 | --- | --- |
-| `create-order` | Verifica el usuario, valida el pedido y llama a `arc_create_order` (precio, stock y cita en una transacción). Avisa en Discord si existe el secreto `DISCORD_WEBHOOK_URL`. |
+| `create-order` | Verifica el usuario, valida el pedido y llama a `arc_create_order` (precio, stock y cita en una transacción). Avisa en Discord si existe el secreto `ARC_DISCORD_WEBHOOK_URL`. |
 
 ```bash
 # Desplegar (no necesita Docker)
 SUPABASE_ACCESS_TOKEN=... npx supabase functions deploy create-order --project-ref evplimhbpveiphqwlggt --use-api
 
 # Secretos opcionales
-npx supabase secrets set --project-ref evplimhbpveiphqwlggt   DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...   ALLOWED_ORIGINS=http://localhost:5173,https://tu-dominio.com
+npx supabase secrets set --project-ref evplimhbpveiphqwlggt   ARC_DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...   ARC_ALLOWED_ORIGINS=http://localhost:5173,https://tu-dominio.com
 ```
 
 ## Estado

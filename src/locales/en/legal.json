@@ -1,6 +1,6 @@
 {
   "updated": "Last updated: October 3, 2026",
-  "demoNotice": "Speranza Supply is a demo project built for learning: no real items are sold and no money is charged. These texts are a template and are not legal advice.",
+  "demoNotice": "El Botín Express is a demo project built for learning: no real items are sold and no money is charged. These texts are a template and are not legal advice.",
   "toc": "On this page",
   "howItWorks": {
     "title": "How it works",
@@ -108,12 +108,12 @@
   },
   "terms": {
     "title": "Terms and conditions",
-    "lede": "These terms govern the use of Speranza Supply and the booking of deliveries.",
+    "lede": "These terms govern the use of El Botín Express and the booking of deliveries.",
     "sections": [
       {
         "title": "Who we are",
         "body": [
-          "Speranza Supply is a fan project not affiliated with Embark Studios AB. ARC Raiders and its elements are trademarks and property of Embark Studios.",
+          "El Botín Express is a fan project not affiliated with Embark Studios AB. ARC Raiders and its elements are trademarks and property of Embark Studios.",
           "In its current version it is a demo project: orders are not charged and no real items are delivered."
         ]
       },
@@ -267,7 +267,7 @@
       {
         "title": "Who sees it",
         "body": [
-          "Only Speranza Supply staff, and only what is needed to handle your order. The assigned admin sees your Embark ID, your Discord username and what you ordered."
+          "Only El Botín Express staff, and only what is needed to handle your order. The assigned admin sees your Embark ID, your Discord username and what you ordered."
         ]
       },
       {
