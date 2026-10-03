@@ -3,6 +3,7 @@ import { RouterProvider } from 'react-router-dom'
 import { isSupabaseConfigured } from '@/lib/supabase'
 import { AuthProvider } from '@/features/auth/AuthProvider'
 import { CartProvider } from '@/features/cart/CartProvider'
+import { CurrencyProvider } from '@/features/currency/CurrencyProvider'
 import { SetupNotice } from '@/pages/SystemPages'
 import { router } from './router'
 
@@ -17,9 +18,11 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <CartProvider>
-          <RouterProvider router={router} />
-        </CartProvider>
+        <CurrencyProvider>
+          <CartProvider>
+            <RouterProvider router={router} />
+          </CartProvider>
+        </CurrencyProvider>
       </AuthProvider>
     </QueryClientProvider>
   )

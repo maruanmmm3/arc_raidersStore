@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '@/lib/useLang'
-import { formatPrice } from '@/lib/money'
+import { formatMoney } from '@/lib/money'
 import { formatDate, formatDateTime, orderNumber } from '@/lib/dates'
 import { ButtonLink } from '@/components/ui/Button'
 import { ErrorState, PageLoader } from '@/components/ui/PageLoader'
@@ -57,9 +57,12 @@ export function OrdersPage() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <span className="font-mono tabular-nums">{formatPrice(o.total_cents, lang)}</span>
-              {appt && (
-                <Link to={`/cita/${appt.ticket_code}`} className="label text-monitor hover:text-concrete-50">
+              <span className="font-mono tabular-nums">{formatMoney(o.total_cents, o.currency, lang)}</span>
+              {(o.public_code || appt) && (
+                <Link
+                  to={o.public_code ? `/pedido/${o.public_code}` : `/cita/${appt.ticket_code}`}
+                  className="label text-monitor hover:text-concrete-50"
+                >
                   {t('list.viewTicket')}
                 </Link>
               )}

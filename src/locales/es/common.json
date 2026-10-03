@@ -28,22 +28,34 @@
   "home": {
     "eyebrow": "Mostrador de Speranza",
     "title": "Equípate antes de subir a la superficie",
-    "lede": "Armas, modificaciones y planos. Reservas día y hora, entras a nuestra sala de Discord y te lo entregamos en una partida juntos.",
+    "lede": "Armas, modificaciones y planos. Compras sin registrarte, transfieres y te lo entregamos en una partida juntos.",
     "ctaShop": "Ver la tienda",
     "ctaDiscord": "Unirme al Discord",
     "featured": "Destacados",
     "seeAll": "Ver todo",
     "stepsTitle": "Cómo funciona",
     "steps": {
-      "pick": { "title": "Elige", "text": "Un arma con sus mods, un plano o un pack ya configurado." },
-      "book": { "title": "Reserva tu cita", "text": "Eliges día y hora. Te damos un ticket con tu sala y tu admin." },
-      "room": { "title": "Entra a la sala", "text": "A la hora, entras al canal de voz y dices tu código." },
-      "play": { "title": "Partida juntos", "text": "Jugáis en escuadra, recoges el objeto y extraes." }
+      "pick": {
+        "title": "Elige y completa tus datos",
+        "text": "Tu usuario de Discord, tu correo y tu ID de Embark. Sin crear cuenta."
+      },
+      "book": {
+        "title": "Transfiere",
+        "text": "Te mostramos el titular, el CBU/alias y el monto exacto. Guarda el comprobante."
+      },
+      "room": {
+        "title": "Entra a nuestro Discord",
+        "text": "Envía tu comprobante en el canal de entregas con tu número de pedido."
+      },
+      "play": {
+        "title": "Recibe tu ítem",
+        "text": "Confirmamos el pago, te agregamos en el juego y te lo entregamos en la partida."
+      }
     }
   },
   "discord": {
     "title": "Nuestro Discord",
-    "lede": "Aquí se hacen las entregas. Cada cita tiene una sala de voz y un admin asignado.",
+    "lede": "Aquí se coordinan las entregas: envía tu comprobante en el canal de entregas y te contactamos para la partida.",
     "join": "Unirme al Discord",
     "notConfigured": "El enlace de invitación aún no está configurado.",
     "rulesTitle": "Normas para tu seguridad",
@@ -71,5 +83,6 @@
     "title": "Falta conectar Supabase",
     "text": "Copia .env.example como .env.local, rellena VITE_SUPABASE_URL y VITE_SUPABASE_ANON_KEY y reinicia `npm run dev`."
   },
-  "loading": "Cargando…"
+  "loading": "Cargando…",
+  "currency": "Moneda"
 }

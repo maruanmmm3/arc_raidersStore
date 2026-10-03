@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { supabase } from '@/lib/supabase'
-import { formatPrice } from '@/lib/money'
+import { formatMoney } from '@/lib/money'
 import { orderNumber } from '@/lib/dates'
 import { Button } from '@/components/ui/Button'
 import { CopyText } from '@/components/ui/CopyText'
@@ -33,7 +33,7 @@ export function NewOrdersAlert() {
     queryFn: async () => {
       const { data, error } = await supabase
         .from('ARC_orders')
-        .select('id, number, created_at, discord_username, embark_id, total_cents, appointments:ARC_appointments ( ticket_code, slot_start )')
+        .select('id, number, created_at, discord_username, embark_id, total_cents, currency, appointments:ARC_appointments ( ticket_code, slot_start )')
         .gt('created_at', seenAt)
         .order('created_at', { ascending: false })
         .limit(20)
@@ -51,7 +51,7 @@ export function NewOrdersAlert() {
       if (notified.current.has(o.id)) continue
       notified.current.add(o.id)
       new Notification(`Nueva compra ${orderNumber(o.number)}`, {
-        body: `Discord: @${o.discord_username ?? '—'} · ${formatPrice(o.total_cents, 'es')}`,
+        body: `Discord: @${o.discord_username ?? '—'} · ${formatMoney(o.total_cents, o.currency, 'es')}`,
         tag: o.id,
       })
     }
@@ -108,17 +108,15 @@ export function NewOrdersAlert() {
                     <span className="text-concrete-500">Sin Discord</span>
                   )}
                   <span className="font-mono text-concrete-300">{o.embark_id}</span>
-                  <span className="font-mono tabular-nums">{formatPrice(o.total_cents, 'es')}</span>
+                  <span className="font-mono tabular-nums">{formatMoney(o.total_cents, o.currency, 'es')}</span>
                   {appt && (
                     <span className="text-concrete-400">
                       Cita: {new Date(appt.slot_start).toLocaleString('es', { dateStyle: 'medium', timeStyle: 'short' })}
                     </span>
                   )}
-                  {appt && (
-                    <Link to={`/cita/${appt.ticket_code}`} className="label ml-auto text-monitor hover:text-concrete-50">
-                      Ver ticket
-                    </Link>
-                  )}
+                  <Link to="/admin/pedidos" className="label ml-auto text-monitor hover:text-concrete-50">
+                    Gestionar
+                  </Link>
                 </li>
               )
             })}

@@ -56,7 +56,7 @@ export function useMyOrders() {
       const { data, error } = await supabase
         .from('ARC_orders')
         .select(`
-          id, number, status, payment_status, total_cents, created_at, buyer_confirmed_at,
+          id, number, public_code, status, payment_status, total_cents, currency, created_at, buyer_confirmed_at,
           items:ARC_order_items ( id, parent_item_id, names, qty ),
           appointments:ARC_appointments ( ticket_code, slot_start, slot_end, status, created_at )
         `)
@@ -95,6 +95,45 @@ export function useCancelMyOrder() {
       queryClient.invalidateQueries({ queryKey: ['slots'] })
     },
   })
+}
+
+// Página pública del pedido (/pedido/:code): funciona sin cuenta, solo con el código
+export function useOrderPublic(code) {
+  return useQuery({
+    queryKey: ['order-public', code],
+    queryFn: async () => {
+      const { data, error } = await supabase.rpc('arc_get_order_public', { p_code: code })
+      if (error) throw error
+      return data
+    },
+    refetchInterval: 30_000, // el estado cambia cuando el staff confirma el pago o entrega
+  })
+}
+
+export function useConfirmDeliveryPublic() {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: async (code) => {
+      const { error } = await supabase.rpc('arc_confirm_delivery_public', { p_code: code })
+      if (error) throw error
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['order-public'] })
+      queryClient.invalidateQueries({ queryKey: ['my-orders'] })
+    },
+  })
+}
+
+// Códigos de pedidos hechos en este navegador, para encontrarlos sin cuenta
+const RECENT_KEY = 'botin-recent-orders'
+
+export function rememberOrder(code) {
+  try {
+    const list = JSON.parse(localStorage.getItem(RECENT_KEY) ?? '[]')
+    localStorage.setItem(RECENT_KEY, JSON.stringify([code, ...list.filter((c) => c !== code)].slice(0, 10)))
+  } catch {
+    // Almacenamiento bloqueado: el enlace del pedido sigue sirviendo
+  }
 }
 
 // El comprador da conformidad de que ha recibido el pedido (solo tras "delivered")

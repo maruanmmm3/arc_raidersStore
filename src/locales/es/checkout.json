@@ -1,65 +1,54 @@
 {
-  "title": "Confirmar pedido",
+  "title": "Completa tu compra",
   "empty": "Tu carrito está vacío.",
+  "noAccount": "No necesitas cuenta para comprar.",
   "steps": {
     "details": "Tus datos",
-    "slot": "Día y hora"
+    "transfer": "Transfiere",
+    "discord": "Entra a Discord",
+    "receive": "Recibe tu ítem"
   },
   "details": {
-    "embarkId": "ID de Embark",
-    "embarkIdHint": "Formato Nombre#1234. El admin te agregará con este ID.",
-    "platform": "Plataforma",
-    "choosePlatform": "Elige tu plataforma",
-    "region": "Región de juego",
-    "regions": {
-      "latam": "Latinoamérica",
-      "na": "Norteamérica",
-      "eu": "Europa",
-      "asia": "Asia",
-      "oce": "Oceanía"
-    },
-    "note": "Nota para el admin (opcional)",
-    "notePlaceholder": "Por ejemplo: prefiero hablar en inglés",
-    "saveToProfile": "Guardar ID de Embark, Discord y plataforma en mi perfil",
-    "paymentMode": "¿Cómo quieres pagar?",
-    "payDiscord": "Acordar por Discord",
-    "payDiscordHint": "Reservas tu cita ahora y cierras el pago con el admin antes de la partida.",
-    "payOnline": "Pagar ahora",
-    "payOnlineHint": "Disponible próximamente.",
-    "acceptTerms": "Acepto los términos y la política de reembolsos",
-    "continue": "Elegir día y hora",
-    "errors": {
-      "embarkId": "Usa el formato Nombre#1234.",
-      "platform": "Elige tu plataforma.",
-      "terms": "Tienes que aceptar los términos para continuar.",
-      "discord": "Escribe tu usuario de Discord: 2 a 32 caracteres, minúsculas, números, \"_\" o \".\"."
-    },
-    "recordingNotice": "Graba la partida de entrega completa. Si pierdes el producto y quieres reclamar, la grabación es la prueba obligatoria (plazo de 24 horas).",
     "discord": "Usuario de Discord",
-    "discordHint": "Te contactamos por aquí para coordinar la entrega. Es tu nombre de usuario (no el visible), por ejemplo raider_pe."
+    "discordHint": "Revisa que esté bien escrito: te contactamos por aquí. Es tu nombre de usuario (no el visible), por ejemplo raider_pe.",
+    "email": "Correo electrónico",
+    "emailHint": "Te sirve para identificar tu pedido. No enviamos publicidad.",
+    "embarkId": "ID de Embark",
+    "embarkIdHint": "Formato Nombre#1234. El admin te agregará en el juego con este ID.",
+    "platform": "Plataforma (opcional)",
+    "choosePlatform": "Sin indicar",
+    "note": "Nota para el staff (opcional)",
+    "notePlaceholder": "Por ejemplo: horario en que puedes jugar",
+    "saveToProfile": "Guardar estos datos en mi perfil",
+    "recordingNotice": "Graba la partida de entrega completa. Si pierdes el producto y quieres reclamar, la grabación es la prueba obligatoria (plazo de 24 horas).",
+    "acceptTerms": "Acepto los términos y la política de reembolsos",
+    "submit": "Continuar al pago",
+    "submitting": "Creando tu pedido…",
+    "errors": {
+      "discord": "Escribe tu usuario de Discord: 2 a 32 caracteres, minúsculas, números, \"_\" o \".\".",
+      "email": "Escribe un correo electrónico válido.",
+      "embarkId": "Usa el formato Nombre#1234.",
+      "terms": "Tienes que aceptar los términos para continuar."
+    },
+    "payWith": "¿Cómo vas a pagar?",
+    "payArs": "Pesos (ARS) · transferencia",
+    "payArsHint": "Transferencia por CBU/CVU o alias. Ideal si estás en Argentina.",
+    "payUsd": "Dólares (USD) · PayPal",
+    "payUsdHint": "Pago por PayPal en dólares. Ideal si estás fuera de Argentina."
   },
-  "slot": {
-    "title": "Elige día y hora",
-    "yourTimezone": "Horas en tu zona horaria: {{tz}}",
-    "storeTime": "{{time}} en {{tz}}",
-    "none": "No hay huecos libres en los próximos días. Vuelve a mirar más tarde o escríbenos en Discord.",
-    "noneDay": "No quedan huecos este día.",
-    "selected": "Tu cita",
-    "back": "Cambiar mis datos",
-    "confirm": "Confirmar y reservar cita",
-    "confirming": "Reservando…",
-    "summary": "Resumen",
+  "summary": {
+    "title": "Resumen",
     "total": "Total",
-    "totalNote": "Calculado en el servidor al confirmar."
+    "totalNote": "El monto exacto a pagar se calcula al confirmar."
   },
   "errors": {
-    "slot_taken": "Alguien acaba de reservar ese hueco. Elige otro.",
     "out_of_stock": "No queda stock suficiente de un producto del carrito ({{detail}}).",
-    "blocked": "Tu cuenta está bloqueada. Escríbenos en Discord.",
-    "online_disabled": "El pago online no está disponible ahora mismo.",
+    "blocked": "Esta cuenta está bloqueada. Escríbenos en Discord.",
+    "invalid_discord": "El usuario de Discord no es válido.",
+    "invalid_email": "El correo electrónico no es válido.",
+    "too_many_open_orders": "Ya tienes varios pedidos pendientes de pago con este correo. Págalos o espera a que se cancelen antes de hacer otro.",
     "invalid_order": "Revisa los datos del pedido: algo no es válido.",
-    "unauthorized": "Tu sesión ha caducado. Vuelve a entrar.",
     "generic": "No se ha podido crear el pedido. Inténtalo de nuevo.",
-    "invalid_discord": "El usuario de Discord no es válido. Revísalo en tus datos."
+    "usd_disabled": "El pago en dólares no está disponible ahora mismo. Elige pesos o escríbenos en Discord."
   }
 }

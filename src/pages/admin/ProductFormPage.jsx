@@ -122,7 +122,7 @@ function ProductForm({ seg, product, options }) {
             </select>
           </F>
           <F label="Precio" error={errors.price}>
-            <input className={`${control} font-mono`} inputMode="decimal" value={f.price} placeholder="19.99" aria-invalid={Boolean(errors.price) || undefined} onChange={(e) => set({ price: e.target.value })} />
+            <input className={`${control} font-mono`} inputMode="decimal" value={f.price} placeholder="4990" aria-invalid={Boolean(errors.price) || undefined} onChange={(e) => set({ price: e.target.value })} />
           </F>
           <F label="Precio tachado" error={errors.compareAt} hint="Opcional, para mostrar descuento">
             <input className={`${control} font-mono`} inputMode="decimal" value={f.compareAt} onChange={(e) => set({ compareAt: e.target.value })} />

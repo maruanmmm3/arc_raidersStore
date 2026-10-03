@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { QRCodeSVG } from 'qrcode.react'
 import { useLang } from '@/lib/useLang'
-import { formatPrice } from '@/lib/money'
+import { formatMoney } from '@/lib/money'
 import { browserTimeZone, formatDateTime, formatTime, orderNumber } from '@/lib/dates'
 import { Button } from '@/components/ui/Button'
 import { buttonClasses } from '@/components/ui/styles'
@@ -165,7 +165,7 @@ export function TicketPage() {
               </ul>
             </Row>
             <Row label={t('ticket.total')}>
-              <span className="font-mono tabular-nums">{formatPrice(ticket.order.total_cents, lang)}</span>
+              <span className="font-mono tabular-nums">{formatMoney(ticket.order.total_cents, ticket.order.currency, lang)}</span>
             </Row>
             <Row label={t('ticket.payment')}>{t(`paymentStatus.${ticket.order.payment_status}`)}</Row>
           </dl>

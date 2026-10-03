@@ -15,6 +15,7 @@ const sections = [
   { to: '/admin/cupones', label: 'Cupones' },
   { to: '/admin/disponibilidad', label: 'Disponibilidad' },
   { to: '/admin/salas', label: 'Salas' },
+  { to: '/admin/ajustes', label: 'Ajustes' },
   { to: '/admin/actividad', label: 'Actividad' },
 ]
 

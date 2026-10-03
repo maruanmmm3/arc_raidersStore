@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '@/lib/useLang'
-import { formatPrice } from '@/lib/money'
+import { useCurrency } from '@/features/currency/CurrencyContext'
 import { RarityBadge } from '@/components/ui/RarityBadge'
 import { rarityBorder } from '@/components/ui/styles'
 import { availableStock, firstImage, pickTranslation, productSubtitle, tierOf } from './api'
@@ -18,6 +18,7 @@ export function StockBadge({ product, threshold = 3 }) {
 export function ProductCard({ product }) {
   const { t } = useTranslation('catalog')
   const lang = useLang()
+  const { price } = useCurrency()
   const { name } = pickTranslation(product.product_translations, lang)
   const tier = tierOf(product)
   const soldOut = availableStock(product) === 0
@@ -42,10 +43,10 @@ export function ProductCard({ product }) {
         <div className="mt-auto flex items-end justify-between gap-2 pt-2">
           <div className="flex items-baseline gap-2">
             <span className="font-mono text-lg font-medium tabular-nums text-concrete-50">
-              {formatPrice(product.price_cents, lang)}
+              {price(product.price_cents)}
             </span>
             {product.compare_at_cents && (
-              <s className="font-mono text-sm tabular-nums text-concrete-500">{formatPrice(product.compare_at_cents, lang)}</s>
+              <s className="font-mono text-sm tabular-nums text-concrete-500">{price(product.compare_at_cents)}</s>
             )}
           </div>
           <StockBadge product={product} />

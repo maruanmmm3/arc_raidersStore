@@ -4,35 +4,27 @@
   "toc": "En esta página",
   "howItWorks": {
     "title": "Cómo funciona",
-    "lede": "En ARC Raiders no hay mercado ni pantalla de intercambio: un objeto solo pasa de un jugador a otro si se suelta durante una partida. Por eso cada entrega es una partida juntos, en el día y la hora que tú eliges.",
+    "lede": "En ARC Raiders no hay mercado ni pantalla de intercambio: un objeto solo pasa de un jugador a otro si se suelta durante una partida. Por eso cada entrega es una partida juntos, que coordinamos por Discord cuando confirmamos tu pago.",
     "steps": [
       {
-        "title": "Elige lo que necesitas",
-        "text": "Armas con sus modificaciones, planos o packs ya configurados. El precio que ves es orientativo: el definitivo lo calcula el servidor al confirmar."
+        "title": "Elige y completa tus datos",
+        "text": "Elige el arma, plano o pack en la tienda, pulsa Continuar y escribe tu usuario de Discord (revisa que esté bien escrito, te contactamos por ahí), tu correo y tu ID de Embark. No necesitas cuenta."
       },
       {
-        "title": "Reserva tu cita",
-        "text": "Indicas tu ID de Embark y tu plataforma, y eliges un hueco libre en el calendario. Las horas se muestran en tu zona horaria."
+        "title": "Transfiere",
+        "text": "Verás el titular, el CBU/alias (con botón para copiar) y el monto. ⚠️ Transfiere el monto exacto y guarda el comprobante."
       },
       {
-        "title": "Recibe tu ticket",
-        "text": "Te damos un código de cita, la sala de Discord y el admin que te atenderá. Puedes añadirlo a tu calendario."
+        "title": "Entra a nuestro Discord",
+        "text": "Únete al servidor con el enlace que aparece en pantalla. Ve al canal de entregas y envía tu comprobante con tu número de pedido."
       },
       {
-        "title": "Entra a la sala",
-        "text": "A la hora reservada, entra al canal de voz asignado y dile tu código al admin. Si acordasteis el pago por Discord, se cierra antes de empezar."
-      },
-      {
-        "title": "Partida juntos",
-        "text": "Os agregáis en el juego, entráis en escuadra y el admin suelta los objetos en una zona segura. Los recoges y extraes."
-      },
-      {
-        "title": "Entrega confirmada",
-        "text": "Cuando extraes, el admin marca el pedido como entregado y tu ticket queda como completado."
+        "title": "Recibe tu ítem",
+        "text": "Cuando confirmemos el pago, te agregamos en el juego, te invitamos a la partida y te entregamos el ítem. ¡Listo! 🎮"
       },
       {
         "title": "Confirma la entrega",
-        "text": "Cuando el admin marca el pedido como entregado, pulsa \"Confirmar que lo he recibido\" en tu ticket. Si algo ha ido mal, no confirmes: reclama con tu grabación."
+        "text": "En la página de tu pedido, pulsa \"Confirmar que lo he recibido\". Si algo ha ido mal, no confirmes: reclama con tu grabación de la partida."
       }
     ],
     "prepareTitle": "Ten esto preparado",
@@ -40,15 +32,14 @@
       "Tu ID de Embark exacto (Nombre#1234).",
       "Una cuenta de Discord y haber entrado a nuestro servidor.",
       "Espacio libre en tu inventario para lo que vas a recibir.",
-      "Unos 30 minutos libres a la hora de la cita.",
       "Un programa para grabar la partida (por ejemplo, la grabación de Steam, Xbox Game Bar, el botón Crear de PS5 u OBS)."
     ],
     "timesTitle": "Plazos",
     "times": [
-      "Puedes reservar desde 2 horas hasta 14 días antes.",
-      "Cada cita dura 30 minutos.",
-      "Puedes cancelar sin coste hasta 3 horas antes si aún no has pagado.",
-      "Si no entras a la sala en 15 minutos, la cita se marca como no presentada."
+      "Revisamos los comprobantes en el horario de atención publicado en Discord.",
+      "Tras confirmar el pago, acordamos contigo la hora de la partida por Discord.",
+      "Los pedidos sin pagar se cancelan a las 48 horas y se libera el stock.",
+      "Guarda el enlace de tu pedido: con él ves el estado sin necesidad de cuenta."
     ],
     "cta": "Ver la tienda"
   },
@@ -57,8 +48,16 @@
     "lede": "Si tu duda no está aquí, escríbenos en el canal #soporte de Discord.",
     "items": [
       {
+        "q": "¿Necesito crear una cuenta?",
+        "a": "No. Solo te pedimos tu usuario de Discord, tu correo y tu ID de Embark. Si tienes cuenta, el pedido queda guardado en \"Mis pedidos\"."
+      },
+      {
+        "q": "¿Cómo veo el estado de mi pedido?",
+        "a": "Con el enlace o el código que te mostramos al confirmar (por ejemplo K7QF-29XM). Guárdalo: con él ves el estado sin cuenta."
+      },
+      {
         "q": "¿Cómo recibo lo que compro?",
-        "a": "En una partida con un admin, el día y la hora que reservas. Suelta los objetos en una zona segura, tú los recoges y extraes."
+        "a": "En una partida con un admin. Cuando confirmamos tu pago te contactamos por Discord, os agregáis en el juego y te suelta los objetos en una zona segura; tú los recoges y extraes."
       },
       {
         "q": "¿En qué plataformas entregáis?",
@@ -66,7 +65,7 @@
       },
       {
         "q": "¿Cuándo pago?",
-        "a": "Si eliges \"Acordar por Discord\", cierras el pago con el admin antes de la partida y él lo registra en tu pedido. El pago online aún no está disponible."
+        "a": "Justo después de completar tus datos: te mostramos el titular, el CBU/alias y el monto exacto. Transfiere y envía el comprobante en nuestro canal de entregas de Discord."
       },
       {
         "q": "¿Qué pasa si muero o no consigo extraer?",
@@ -81,12 +80,8 @@
         "a": "Cuando el admin marca tu pedido como entregado, confirmas en tu ticket que lo has recibido. Desde ese momento la entrega queda cerrada y no se aceptan reclamaciones por pérdida. Si algo fue mal, reclama antes de confirmar."
       },
       {
-        "q": "¿Y si no puedo ir a mi cita?",
-        "a": "Cancela desde tu ticket hasta 3 horas antes si no has pagado. Si ya pagaste, escríbenos en Discord y buscamos otra hora."
-      },
-      {
         "q": "¿Cómo sé que hablo con alguien del staff?",
-        "a": "Tu ticket muestra el nombre exacto del admin asignado. El staff nunca te escribe primero por privado ni te pide pagar fuera de lo que indica tu ticket."
+        "a": "El staff tiene el rol verificado en nuestro servidor y nunca te escribe primero por privado ni te pide pagar un monto distinto al de tu pedido."
       },
       {
         "q": "¿Qué son los planos?",
@@ -132,10 +127,11 @@
         ]
       },
       {
-        "title": "Citas y entrega",
+        "title": "Pago y entrega",
         "body": [
-          "La entrega se realiza en una partida conjunta en la cita reservada. Debes entrar a la sala de Discord asignada a la hora indicada y seguir las instrucciones del admin.",
-          "Si no te presentas en 15 minutos, la cita se marca como no presentada. Si la entrega falla por causas del juego (muerte, desconexión), se repite una vez sin coste."
+          "Tras completar tus datos, te mostramos los datos para transferir y el monto exacto. Debes transferir ese monto y enviar el comprobante en el canal de entregas de nuestro Discord.",
+          "Cuando confirmamos el pago, te contactamos por Discord para acordar la partida de entrega. Si la entrega falla por causas del juego (muerte, desconexión), se repite una vez sin coste.",
+          "Los pedidos sin pagar se cancelan a las 48 horas y el stock reservado se libera."
         ]
       },
       {
@@ -158,7 +154,7 @@
       {
         "title": "Pagos",
         "body": [
-          "En el modo \"Acordar por Discord\", el pago se cierra con el admin antes de la partida y queda registrado en tu pedido con una referencia. Nunca pagues un importe distinto al de tu ticket."
+          "El pago se realiza por transferencia a la cuenta indicada en tu pedido. Nunca pagues un importe distinto al de tu pedido ni a otra cuenta, aunque te lo pida alguien que diga ser del staff."
         ]
       },
       {
@@ -199,9 +195,9 @@
     "lede": "Queremos que cada entrega salga bien. Si no es así, esto es lo que hacemos.",
     "sections": [
       {
-        "title": "Cancelación sin coste",
+        "title": "Cancelación",
         "body": [
-          "Puedes cancelar tu pedido desde el ticket hasta 3 horas antes de la cita si aún no has pagado. La cita y el stock reservado se liberan al momento."
+          "Si aún no has transferido, no tienes que hacer nada: el pedido se cancela solo a las 48 horas. Si ya transferiste y quieres cancelar antes de la entrega, escríbenos en #soporte con tu número de pedido."
         ]
       },
       {
@@ -227,9 +223,9 @@
         ]
       },
       {
-        "title": "No presentado",
+        "title": "No te presentas a la entrega",
         "body": [
-          "Si no entras a la sala en 15 minutos, puedes reservar una nueva cita una vez. Si vuelves a faltar, el pedido se cancela y, si pagaste, se devuelve el importe menos los costes de gestión que se te hayan indicado antes de pagar."
+          "Si acordamos una hora por Discord y no apareces, te proponemos otra una vez. Si vuelves a faltar, el pedido se cancela y se devuelve el importe menos los costes de gestión que se te hayan indicado antes de pagar."
         ]
       },
       {

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useLang } from '@/lib/useLang'
-import { formatPrice } from '@/lib/money'
+import { useCurrency } from '@/features/currency/CurrencyContext'
 import { rarityText } from '@/components/ui/styles'
 import { availableStock, one, pickTranslation } from './api'
 
@@ -10,6 +10,7 @@ const SLOT_ORDER = ['muzzle', 'optic', 'barrel', 'underbarrel', 'magazine', 'sto
 export function ModPicker({ mods, selected, onChange }) {
   const { t } = useTranslation('catalog')
   const lang = useLang()
+  const { price } = useCurrency()
 
   const bySlot = new Map()
   for (const mod of mods) {
@@ -62,7 +63,7 @@ export function ModPicker({ mods, selected, onChange }) {
                     {tr.effect && <span className="text-xs text-concrete-400">{tr.effect}</span>}
                   </span>
                   <span className="font-mono text-xs tabular-nums text-concrete-300">
-                    {out ? t('stock.out') : `+${formatPrice(mod.price_cents, lang)}`}
+                    {out ? t('stock.out') : `+${price(mod.price_cents)}`}
                   </span>
                 </label>
               )

@@ -4,35 +4,27 @@
   "toc": "On this page",
   "howItWorks": {
     "title": "How it works",
-    "lede": "ARC Raiders has no market or trade screen: an item only moves from one player to another if it is dropped during a match. That is why every delivery is a match together, on the day and time you choose.",
+    "lede": "ARC Raiders has no market or trade screen: an item only moves from one player to another if it is dropped during a match. That is why every delivery is a match together, arranged on Discord once we confirm your payment.",
     "steps": [
       {
-        "title": "Pick what you need",
-        "text": "Weapons with their mods, blueprints or ready-made bundles. The price you see is an estimate: the final one is calculated on the server when you confirm."
+        "title": "Pick and fill in your details",
+        "text": "Choose the weapon, blueprint or bundle, press Continue and enter your Discord username (double-check it, we contact you there), your email and your Embark ID. No account needed."
       },
       {
-        "title": "Book your slot",
-        "text": "Enter your Embark ID and platform, and pick a free slot on the calendar. Times are shown in your time zone."
+        "title": "Transfer",
+        "text": "You will see the account holder, CBU/alias (with a copy button) and the amount. ⚠️ Transfer the exact amount and keep the receipt."
       },
       {
-        "title": "Get your ticket",
-        "text": "You get an appointment code, the Discord room and the admin who will serve you. You can add it to your calendar."
+        "title": "Join our Discord",
+        "text": "Join the server with the link shown on screen. Go to the delivery channel and send your receipt with your order number."
       },
       {
-        "title": "Join the room",
-        "text": "At your time, join the assigned voice channel and tell the admin your code. If you agreed to pay on Discord, payment is settled before starting."
-      },
-      {
-        "title": "Play together",
-        "text": "You add each other in game, squad up and the admin drops the items in a safe spot. You pick them up and extract."
-      },
-      {
-        "title": "Delivery confirmed",
-        "text": "Once you extract, the admin marks the order as delivered and your ticket is completed."
+        "title": "Get your item",
+        "text": "Once we confirm the payment, we add you in game, invite you to the match and hand over the item. Done! 🎮"
       },
       {
         "title": "Confirm the delivery",
-        "text": "When the admin marks the order as delivered, press \"Confirm I received it\" on your ticket. If something went wrong, do not confirm: file a claim with your recording."
+        "text": "On your order page, press \"Confirm I received it\". If something went wrong, do not confirm: file a claim with your match recording."
       }
     ],
     "prepareTitle": "Have this ready",
@@ -45,10 +37,10 @@
     ],
     "timesTitle": "Timing",
     "times": [
-      "You can book from 2 hours up to 14 days ahead.",
-      "Each appointment lasts 30 minutes.",
-      "You can cancel for free up to 3 hours before if you have not paid yet.",
-      "If you do not join the room within 15 minutes, the appointment is marked as a no-show."
+      "We review receipts during the support hours posted on Discord.",
+      "After confirming the payment, we agree on the match time with you on Discord.",
+      "Unpaid orders are cancelled after 48 hours and the stock is released.",
+      "Keep your order link: it shows the status without an account."
     ],
     "cta": "Browse the shop"
   },
@@ -57,8 +49,16 @@
     "lede": "If your question is not here, message us in the #support channel on Discord.",
     "items": [
       {
+        "q": "Do I need an account?",
+        "a": "No. We only ask for your Discord username, email and Embark ID. If you have an account, the order is saved under \"My orders\"."
+      },
+      {
+        "q": "How do I check my order status?",
+        "a": "With the link or code shown when you confirm (for example K7QF-29XM). Keep it: it shows the status without an account."
+      },
+      {
         "q": "How do I receive what I buy?",
-        "a": "In a match with an admin, on the day and time you booked. They drop the items in a safe spot, you pick them up and extract."
+        "a": "In a match with an admin. Once we confirm your payment we contact you on Discord, you add each other in game and they drop the items in a safe spot; you pick them up and extract."
       },
       {
         "q": "Which platforms do you deliver on?",
@@ -66,7 +66,7 @@
       },
       {
         "q": "When do I pay?",
-        "a": "If you choose \"Arrange on Discord\", you settle payment with the admin before the match and they record it on your order. Online payment is not available yet."
+        "a": "Right after filling in your details: we show you the account holder, CBU/alias and the exact amount. Transfer and send the receipt in our Discord delivery channel."
       },
       {
         "q": "What if I die or fail to extract?",
@@ -81,12 +81,8 @@
         "a": "When the admin marks your order as delivered, you confirm on your ticket that you received it. From then on the delivery is closed and claims for loss are not accepted. If something went wrong, claim before confirming."
       },
       {
-        "q": "What if I cannot make my appointment?",
-        "a": "Cancel from your ticket up to 3 hours before if you have not paid. If you already paid, message us on Discord and we will find another time."
-      },
-      {
         "q": "How do I know I am talking to staff?",
-        "a": "Your ticket shows the exact name of the assigned admin. Staff never DM you first or ask you to pay anything other than what your ticket shows."
+        "a": "Staff have the verified role on our server and never DM you first or ask you to pay an amount different from your order."
       },
       {
         "q": "What are blueprints?",
@@ -132,10 +128,11 @@
         ]
       },
       {
-        "title": "Appointments and delivery",
+        "title": "Payment and delivery",
         "body": [
-          "Delivery takes place in a joint match at the booked time. You must join the assigned Discord room on time and follow the admin's instructions.",
-          "If you do not show up within 15 minutes, the appointment is marked as a no-show. If delivery fails for in-game reasons (death, disconnection), it is repeated once for free."
+          "After you fill in your details, we show you the transfer details and the exact amount. You must transfer that amount and send the receipt in our Discord delivery channel.",
+          "Once we confirm the payment, we contact you on Discord to agree on the delivery match. If delivery fails for in-game reasons (death, disconnection), it is repeated once for free.",
+          "Unpaid orders are cancelled after 48 hours and the reserved stock is released."
         ]
       },
       {
@@ -158,7 +155,7 @@
       {
         "title": "Payments",
         "body": [
-          "With \"Arrange on Discord\", payment is settled with the admin before the match and recorded on your order with a reference. Never pay an amount different from your ticket."
+          "Payment is made by transfer to the account shown on your order. Never pay an amount different from your order or to another account, even if someone claiming to be staff asks you to."
         ]
       },
       {
@@ -199,9 +196,9 @@
     "lede": "We want every delivery to go well. If it does not, this is what we do.",
     "sections": [
       {
-        "title": "Free cancellation",
+        "title": "Cancellation",
         "body": [
-          "You can cancel your order from the ticket up to 3 hours before the appointment if you have not paid yet. The slot and reserved stock are released immediately."
+          "If you have not transferred yet, you do not need to do anything: the order is cancelled automatically after 48 hours. If you already transferred and want to cancel before delivery, message us in #support with your order number."
         ]
       },
       {
@@ -227,9 +224,9 @@
         ]
       },
       {
-        "title": "No-show",
+        "title": "You miss the delivery",
         "body": [
-          "If you do not join the room within 15 minutes, you can book a new appointment once. If you miss it again, the order is cancelled and, if you paid, refunded minus any handling costs you were told about before paying."
+          "If we agree on a time on Discord and you do not show up, we offer you another one once. If you miss it again, the order is cancelled and the amount refunded minus any handling costs you were told about before paying."
         ]
       },
       {

@@ -28,22 +28,34 @@
   "home": {
     "eyebrow": "Speranza counter",
     "title": "Gear up before you head topside",
-    "lede": "Weapons, mods and blueprints. Pick a day and time, join our Discord room and we hand it over in a match together.",
+    "lede": "Weapons, mods and blueprints. Buy without an account, make a transfer and we hand it over in a match together.",
     "ctaShop": "Browse the shop",
     "ctaDiscord": "Join the Discord",
     "featured": "Featured",
     "seeAll": "See all",
     "stepsTitle": "How it works",
     "steps": {
-      "pick": { "title": "Pick", "text": "A weapon with its mods, a blueprint or a ready-made bundle." },
-      "book": { "title": "Book a slot", "text": "Choose a day and time. You get a ticket with your room and your admin." },
-      "room": { "title": "Join the room", "text": "At your time, join the voice channel and say your code." },
-      "play": { "title": "Play together", "text": "Squad up, pick up the item and extract." }
+      "pick": {
+        "title": "Pick and fill in your details",
+        "text": "Your Discord username, email and Embark ID. No account needed."
+      },
+      "book": {
+        "title": "Transfer",
+        "text": "We show you the account holder, CBU/alias and the exact amount. Keep the receipt."
+      },
+      "room": {
+        "title": "Join our Discord",
+        "text": "Send your receipt in the delivery channel with your order number."
+      },
+      "play": {
+        "title": "Get your item",
+        "text": "We confirm the payment, add you in game and hand it over in the match."
+      }
     }
   },
   "discord": {
     "title": "Our Discord",
-    "lede": "Deliveries happen here. Every appointment has a voice room and an assigned admin.",
+    "lede": "Deliveries are arranged here: send your receipt in the delivery channel and we will contact you for the match.",
     "join": "Join the Discord",
     "notConfigured": "The invite link is not set up yet.",
     "rulesTitle": "Rules for your safety",
@@ -71,5 +83,6 @@
     "title": "Supabase is not connected",
     "text": "Copy .env.example to .env.local, fill in VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY and restart `npm run dev`."
   },
-  "loading": "Loading…"
+  "loading": "Loading…",
+  "currency": "Currency"
 }

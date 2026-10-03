@@ -5,6 +5,7 @@ import { FilterBar } from '@/features/catalog/FilterBar'
 import { ProductCard } from '@/features/catalog/ProductCard'
 import { KIND_BY_SEGMENT, PAGE_SIZE } from '@/features/catalog/api'
 import { useCatalogFilters, useProducts } from '@/features/catalog/hooks'
+import { useCurrency } from '@/features/currency/CurrencyContext'
 
 const kindTabs = [
   { to: '/tienda', key: 'all', end: true },
@@ -19,7 +20,11 @@ export function CatalogPage() {
   const kind = categoria ? KIND_BY_SEGMENT[categoria] : null
   const { t } = useTranslation('catalog')
   const { filters, update, clear } = useCatalogFilters(kind)
-  const { data, isPending, isError, isPlaceholderData, refetch } = useProducts(filters)
+  const { currency, usdRate } = useCurrency()
+  // Los filtros de precio se escriben en la moneda elegida; la BD guarda pesos
+  const toBase = (v) => (v != null && currency === 'USD' ? v * usdRate : v)
+  const queryFilters = { ...filters, min: toBase(filters.min), max: toBase(filters.max) }
+  const { data, isPending, isError, isPlaceholderData, refetch } = useProducts(queryFilters)
 
   if (categoria && !kind) return <Navigate to="/tienda" replace />
 

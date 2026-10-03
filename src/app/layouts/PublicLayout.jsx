@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useAuth } from '@/features/auth/AuthContext'
 import { useCart } from '@/features/cart/CartContext'
-import { LanguageSwitch } from './LanguageSwitch'
+import { CurrencySwitch, LanguageSwitch } from './LanguageSwitch'
 
 const DEMO = import.meta.env.VITE_DEMO_MODE !== 'false'
 
@@ -60,6 +60,7 @@ function Header() {
 
         <div className="ml-auto flex items-center gap-3">
           <LanguageSwitch />
+          <CurrencySwitch />
           <Link to="/carrito" className="relative p-2 text-concrete-300 hover:text-concrete-50" aria-label={t('nav.cart')}>
             <CartIcon />
             {count > 0 && (

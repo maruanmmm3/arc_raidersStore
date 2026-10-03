@@ -1,13 +1,10 @@
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { formatPrice } from '@/lib/money'
 import { formatTime, localDayKey, orderNumber } from '@/lib/dates'
-import { Button } from '@/components/ui/Button'
-import { Alert } from '@/components/ui/Field'
-import { CopyText } from '@/components/ui/CopyText'
 import { ErrorState, PageLoader } from '@/components/ui/PageLoader'
-import { adminErrorMessage, useAgenda, useAgendaAction } from '@/features/admin/agendaApi'
-import { itemName, nestItems } from '@/features/orders/api'
+import { useAgenda } from '@/features/admin/agendaApi'
+import { OrderActions } from '@/features/admin/OrderActions'
+import { OrderSummary } from '@/features/admin/OrderSummary'
 
 const LANG = 'es' // el admin está en español por ahora
 
@@ -34,53 +31,10 @@ const apptTone = {
   rescheduled: 'border-carbon-500',
 }
 
-// Acciones posibles según el estado del pedido. needsText: la nota o referencia es obligatoria
-function actionsFor(order) {
-  const list = []
-  const unpaid = ['unpaid', 'awaiting'].includes(order.payment_status)
-  if (unpaid && order.status !== 'cancelled') {
-    list.push({ id: 'paid', label: 'Registrar pago', action: 'paid', value: 'paid_manual', needsText: true, placeholder: 'Referencia: Yape 123456, PayPal…' })
-    list.push({ id: 'free', label: 'Sin coste', action: 'paid', value: 'not_required', needsText: false, placeholder: 'Nota opcional' })
-  }
-  if (order.status === 'scheduled') {
-    list.push({ id: 'start', label: 'Iniciar entrega', action: 'status', value: 'delivering', primary: true })
-    list.push({ id: 'noshow', label: 'No se presentó', action: 'no_show', needsText: false, placeholder: 'Nota opcional' })
-  }
-  if (order.status === 'delivering') {
-    list.push({ id: 'done', label: 'Entregado', action: 'status', value: 'delivered', primary: true, needsText: unpaid, placeholder: unpaid ? 'Sin pago registrado: explica por qué' : 'Nota opcional' })
-    list.push({ id: 'retry', label: 'Falló, reintentar', action: 'status', value: 'scheduled', needsText: false, placeholder: 'Qué pasó (opcional)' })
-  }
-  if (['requested', 'scheduled', 'delivering'].includes(order.status)) {
-    list.push({ id: 'cancel', label: 'Cancelar pedido', action: 'status', value: 'cancelled', needsText: true, placeholder: 'Motivo de la cancelación' })
-  }
-  return list
-}
-
 function AppointmentCard({ appt }) {
   const { t } = useTranslation(['orders', 'account'])
-  const mutation = useAgendaAction()
-  const [pending, setPending] = useState(null) // acción que espera texto
-  const [text, setText] = useState('')
   const order = appt.order
-  const actions = actionsFor(order)
   const isActive = ['booked', 'checked_in'].includes(appt.status)
-
-  const execute = (a, value = '') => {
-    mutation.mutate(
-      { action: a.action, orderId: order.id, value: a.value, text: value.trim() },
-      { onSuccess: () => { setPending(null); setText('') } },
-    )
-  }
-
-  const onClick = (a) => {
-    mutation.reset()
-    if (a.placeholder) {
-      setPending(a)
-      setText('')
-    } else {
-      execute(a)
-    }
-  }
 
   return (
     <li className={`flex flex-col gap-3 rounded-sm border-l-4 bg-carbon-800 p-4 ${apptTone[appt.status]}`}>
@@ -91,79 +45,11 @@ function AppointmentCard({ appt }) {
         <span className="ml-auto font-mono text-xs uppercase text-concrete-300">{t(`appointmentStatus.${appt.status}`)}</span>
       </div>
 
-      <div className="grid gap-2 text-sm md:grid-cols-3">
-        <div>
-          <p className="label">Jugador</p>
-          <p className="font-mono text-concrete-50">{order.embark_id}</p>
-          <p className="text-concrete-400">
-            {t(`account:platform.${order.platform}`)}{order.region ? ` · ${order.region}` : ''}
-          </p>
-          <p className="text-concrete-400">{order.buyer?.username}</p>
-          {order.discord_username && (
-            <CopyText text={`@${order.discord_username}`} label="Copiar" className="text-monitor" />
-          )}
-        </div>
-        <div>
-          <p className="label">{orderNumber(order.number)}</p>
-          <ul>
-            {nestItems(order.items).map((i) => (
-              <li key={i.id} className="text-concrete-100">
-                {i.qty > 1 && `${i.qty} × `}{itemName(i, LANG)}
-                {i.mods.length > 0 && <span className="text-concrete-400"> + {i.mods.map((m) => itemName(m, LANG)).join(', ')}</span>}
-              </li>
-            ))}
-          </ul>
-          {order.availability_note && <p className="mt-1 italic text-concrete-400">“{order.availability_note}”</p>}
-        </div>
-        <div>
-          <p className="label">Pago</p>
-          <p className="font-mono text-concrete-50">{formatPrice(order.total_cents, LANG)}</p>
-          <p className="text-concrete-400">{t(`paymentStatus.${order.payment_status}`)}{order.payment_reference ? ` · ${order.payment_reference}` : ''}</p>
-          <p className="text-concrete-400">Pedido: {t(`orderStatus.${order.status}`)}</p>
-          {order.status === 'delivered' && (
-            order.buyer_confirmed_at
-              ? <p className="text-valve">Cliente conforme · {new Date(order.buyer_confirmed_at).toLocaleString(LANG)}</p>
-              : <p className="text-ember">Pendiente de conformidad del cliente</p>
-          )}
-        </div>
-      </div>
+      <OrderSummary order={order} />
 
       {isActive || order.status === 'requested' ? (
-        <div className="flex flex-col gap-2 border-t border-carbon-600 pt-3">
-          {pending ? (
-            <form
-              className="flex flex-col gap-2 sm:flex-row"
-              onSubmit={(e) => {
-                e.preventDefault()
-                execute(pending, text)
-              }}
-            >
-              <label className="sr-only" htmlFor={`note-${appt.id}`}>{pending.placeholder}</label>
-              <input
-                id={`note-${appt.id}`}
-                autoFocus
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                placeholder={pending.placeholder}
-                required={pending.needsText}
-                maxLength={300}
-                className="flex-1 rounded-sm border border-carbon-500 bg-carbon-850 px-3 py-2 text-sm text-concrete-50 focus:border-monitor focus:outline-none"
-              />
-              <Button type="submit" size="sm" disabled={mutation.isPending || (pending.needsText && !text.trim())}>
-                {pending.label}
-              </Button>
-              <Button size="sm" variant="ghost" onClick={() => setPending(null)}>Volver</Button>
-            </form>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {actions.map((a) => (
-                <Button key={a.id} size="sm" variant={a.primary ? 'primary' : 'secondary'} disabled={mutation.isPending} onClick={() => onClick(a)}>
-                  {a.label}
-                </Button>
-              ))}
-            </div>
-          )}
-          {mutation.isError && <Alert>{adminErrorMessage(mutation.error)}</Alert>}
+        <div className="border-t border-carbon-600 pt-3">
+          <OrderActions order={order} hasAppointment={isActive} idKey={appt.id} />
         </div>
       ) : null}
     </li>

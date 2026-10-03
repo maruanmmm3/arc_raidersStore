@@ -35,7 +35,7 @@ export function useAgenda(fromIso, toIso) {
             admin:ARC_profiles!arc_appointments_admin_fk ( username, discord_username ),
             order:ARC_orders!arc_appointments_order_fk (
               id, number, status, payment_status, total_cents, embark_id, platform, region,
-              availability_note, discord_username, payment_reference, buyer_confirmed_at,
+              availability_note, discord_username, payment_reference, buyer_confirmed_at, guest_email, public_code, currency,
               buyer:ARC_profiles!arc_orders_user_fk ( username, discord_username ),
               items:ARC_order_items ( id, parent_item_id, names, qty )
             )
@@ -63,7 +63,36 @@ export function useAgendaAction() {
       }
       throw new Error('acción desconocida')
     },
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['admin', 'agenda'] }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['admin', 'agenda'] })
+      queryClient.invalidateQueries({ queryKey: ['admin', 'orders'] })
+    },
+  })
+}
+
+// --- Pedidos (con o sin cita) ---------------------------------------------
+
+export function useAdminOrders() {
+  return useQuery({
+    queryKey: ['admin', 'orders'],
+    queryFn: async () => {
+      // Cancela los pedidos sin pagar con más de 48 h antes de listar (libera su stock)
+      await supabase.rpc('arc_expire_unpaid_orders')
+      return run(
+        supabase
+          .from('ARC_orders')
+          .select(`
+            id, number, public_code, status, payment_status, total_cents, currency, base_total_cents, payment_method, embark_id, platform,
+            availability_note, discord_username, guest_email, payment_reference, buyer_confirmed_at, created_at,
+            buyer:ARC_profiles!arc_orders_user_fk ( username ),
+            items:ARC_order_items ( id, parent_item_id, names, qty ),
+            appointments:ARC_appointments ( id, status, slot_start )
+          `)
+          .order('created_at', { ascending: false })
+          .limit(300),
+      )
+    },
+    refetchInterval: 30_000,
   })
 }
 

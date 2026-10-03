@@ -22,6 +22,9 @@ import { AvailabilityPage } from '@/pages/admin/AvailabilityPage'
 import { ProductsListPage } from '@/pages/admin/ProductsListPage'
 import { ProductFormPage } from '@/pages/admin/ProductFormPage'
 import { UsersPage } from '@/pages/admin/UsersPage'
+import { OrdersAdminPage } from '@/pages/admin/OrdersAdminPage'
+import { SettingsPage } from '@/pages/admin/SettingsPage'
+import { OrderPage } from '@/pages/OrderPage'
 import { ContactPage, FaqPage, HowItWorksPage, LegalPage } from '@/pages/TrustPages'
 import { NotFoundPage, RouteError } from '@/pages/SystemPages'
 
@@ -37,6 +40,8 @@ export const router = createBrowserRouter([
       { path: 'tienda/:categoria', element: <CatalogPage /> },
       { path: 'producto/:slug', element: <ProductRoute /> },
       { path: 'carrito', element: <CartPage /> },
+      { path: 'checkout', element: <CheckoutPage /> },
+      { path: 'pedido/:code', element: <OrderPage /> },
       { path: 'discord', element: <DiscordPage /> },
       { path: 'como-funciona', element: <HowItWorksPage /> },
       { path: 'faq', element: <FaqPage /> },
@@ -56,7 +61,6 @@ export const router = createBrowserRouter([
       {
         element: <RequireAuth />,
         children: [
-          { path: 'checkout', element: <CheckoutPage /> },
           { path: 'cita/:code', element: <TicketPage /> },
           {
             path: 'cuenta',
@@ -86,6 +90,8 @@ export const router = createBrowserRouter([
       { path: 'salas', element: <RoomsPage /> },
       { path: 'disponibilidad', element: <AvailabilityPage /> },
       { path: 'usuarios', element: <UsersPage /> },
+      { path: 'pedidos', element: <OrdersAdminPage /> },
+      { path: 'ajustes', element: <SettingsPage /> },
       // armas | planos | mods | packs (ADMIN_KINDS); cualquier otro segmento vuelve a /admin
       { path: ':seg', element: <ProductsListPage /> },
       { path: ':seg/:id', element: <ProductFormPage /> },

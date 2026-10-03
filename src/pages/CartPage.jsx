@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '@/lib/useLang'
-import { formatPrice } from '@/lib/money'
+import { useCurrency } from '@/features/currency/CurrencyContext'
 import { ButtonLink } from '@/components/ui/Button'
 import { rarityBorder } from '@/components/ui/styles'
 import { pickTranslation } from '@/features/catalog/api'
@@ -11,6 +11,7 @@ export function CartPage() {
   const { t } = useTranslation('cart')
   const lang = useLang()
   const { lines, count, subtotalCents, setQty, remove, maxQty } = useCart()
+  const { price } = useCurrency()
 
   if (!lines.length) {
     return (
@@ -58,7 +59,7 @@ export function CartPage() {
                       ))}
                     </select>
                   </label>
-                  <span className="w-24 text-right font-mono tabular-nums">{formatPrice(unit * line.qty, lang)}</span>
+                  <span className="w-24 text-right font-mono tabular-nums">{price(unit * line.qty)}</span>
                   <button type="button" onClick={() => remove(line.key)} className="label hover:text-signal-hover">
                     {t('remove')}
                   </button>
@@ -71,7 +72,7 @@ export function CartPage() {
         <aside className="flex h-fit flex-col gap-4 rounded-sm bg-carbon-800 p-5">
           <div className="flex items-baseline justify-between">
             <span className="text-concrete-300">{t('subtotal')}</span>
-            <span className="font-mono text-2xl tabular-nums">{formatPrice(subtotalCents, lang)}</span>
+            <span className="font-mono text-2xl tabular-nums">{price(subtotalCents)}</span>
           </div>
           <p className="text-xs text-concrete-500">{t('estimateNote')}</p>
           <ButtonLink to="/checkout" size="lg">{t('checkout')}</ButtonLink>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '@/lib/useLang'
-import { formatPrice } from '@/lib/money'
+import { useCurrency } from '@/features/currency/CurrencyContext'
 import { Button } from '@/components/ui/Button'
 import { ErrorState, PageLoader } from '@/components/ui/PageLoader'
 import { RarityBadge } from '@/components/ui/RarityBadge'
@@ -50,6 +50,7 @@ function ProductPage({ slug }) {
   const weapon = one(product?.weapon_details)
   const mods = useCompatibleMods(weapon ? product.id : null)
   const cart = useCart()
+  const { price } = useCurrency()
   const [selected, setSelected] = useState({})
   const [added, setAdded] = useState(false)
 
@@ -133,9 +134,9 @@ function ProductPage({ slug }) {
               <div className="flex flex-col">
                 {chosenMods.length > 0 && <span className="label">{t('detail.total')}</span>}
                 <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-3xl font-medium tabular-nums">{formatPrice(totalCents, lang)}</span>
+                  <span className="font-mono text-3xl font-medium tabular-nums">{price(totalCents)}</span>
                   {product.compare_at_cents && chosenMods.length === 0 && (
-                    <s className="font-mono text-lg tabular-nums text-concrete-500">{formatPrice(product.compare_at_cents, lang)}</s>
+                    <s className="font-mono text-lg tabular-nums text-concrete-500">{price(product.compare_at_cents)}</s>
                   )}
                 </div>
               </div>

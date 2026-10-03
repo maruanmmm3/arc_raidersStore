@@ -1,65 +1,54 @@
 {
-  "title": "Confirm order",
+  "title": "Complete your purchase",
   "empty": "Your cart is empty.",
+  "noAccount": "No account needed to buy.",
   "steps": {
     "details": "Your details",
-    "slot": "Day and time"
+    "transfer": "Transfer",
+    "discord": "Join Discord",
+    "receive": "Get your item"
   },
   "details": {
-    "embarkId": "Embark ID",
-    "embarkIdHint": "Format Name#1234. The admin will add you with this ID.",
-    "platform": "Platform",
-    "choosePlatform": "Choose your platform",
-    "region": "Game region",
-    "regions": {
-      "latam": "Latin America",
-      "na": "North America",
-      "eu": "Europe",
-      "asia": "Asia",
-      "oce": "Oceania"
-    },
-    "note": "Note for the admin (optional)",
-    "notePlaceholder": "For example: I prefer to speak Spanish",
-    "saveToProfile": "Save Embark ID, Discord and platform to my profile",
-    "paymentMode": "How do you want to pay?",
-    "payDiscord": "Arrange on Discord",
-    "payDiscordHint": "Book your slot now and settle payment with the admin before the match.",
-    "payOnline": "Pay now",
-    "payOnlineHint": "Coming soon.",
-    "acceptTerms": "I accept the terms and the refund policy",
-    "continue": "Pick day and time",
-    "errors": {
-      "embarkId": "Use the format Name#1234.",
-      "platform": "Choose your platform.",
-      "terms": "You need to accept the terms to continue.",
-      "discord": "Enter your Discord username: 2 to 32 characters, lowercase letters, numbers, \"_\" or \".\"."
-    },
-    "recordingNotice": "Record the full delivery match. If you lose the product and want to file a claim, the recording is the required evidence (24-hour deadline).",
     "discord": "Discord username",
-    "discordHint": "We contact you here to arrange the delivery. Your username (not your display name), for example raider_pe."
+    "discordHint": "Double-check it: this is how we contact you. Your username (not your display name), for example raider_pe.",
+    "email": "Email",
+    "emailHint": "Used to identify your order. We do not send marketing.",
+    "embarkId": "Embark ID",
+    "embarkIdHint": "Format Name#1234. The admin will add you in game with this ID.",
+    "platform": "Platform (optional)",
+    "choosePlatform": "Not specified",
+    "note": "Note for the staff (optional)",
+    "notePlaceholder": "For example: when you are available to play",
+    "saveToProfile": "Save these details to my profile",
+    "recordingNotice": "Record the full delivery match. If you lose the product and want to file a claim, the recording is the required evidence (24-hour deadline).",
+    "acceptTerms": "I accept the terms and the refund policy",
+    "submit": "Continue to payment",
+    "submitting": "Creating your order…",
+    "errors": {
+      "discord": "Enter your Discord username: 2 to 32 characters, lowercase letters, numbers, \"_\" or \".\".",
+      "email": "Enter a valid email.",
+      "embarkId": "Use the format Name#1234.",
+      "terms": "You need to accept the terms to continue."
+    },
+    "payWith": "How will you pay?",
+    "payArs": "Pesos (ARS) · bank transfer",
+    "payArsHint": "Transfer to a CBU/CVU or alias. Best if you are in Argentina.",
+    "payUsd": "Dollars (USD) · PayPal",
+    "payUsdHint": "Pay with PayPal in US dollars. Best if you are outside Argentina."
   },
-  "slot": {
-    "title": "Pick a day and time",
-    "yourTimezone": "Times in your time zone: {{tz}}",
-    "storeTime": "{{time}} in {{tz}}",
-    "none": "No free slots in the next few days. Check back later or message us on Discord.",
-    "noneDay": "No slots left on this day.",
-    "selected": "Your appointment",
-    "back": "Change my details",
-    "confirm": "Confirm and book",
-    "confirming": "Booking…",
-    "summary": "Summary",
+  "summary": {
+    "title": "Summary",
     "total": "Total",
-    "totalNote": "Calculated on the server when you confirm."
+    "totalNote": "The exact amount to pay is calculated when you confirm."
   },
   "errors": {
-    "slot_taken": "Someone just booked that slot. Pick another one.",
     "out_of_stock": "Not enough stock for a product in your cart ({{detail}}).",
-    "blocked": "Your account is blocked. Message us on Discord.",
-    "online_disabled": "Online payment is not available right now.",
+    "blocked": "This account is blocked. Message us on Discord.",
+    "invalid_discord": "The Discord username is not valid.",
+    "invalid_email": "The email is not valid.",
+    "too_many_open_orders": "You already have several unpaid orders with this email. Pay them or wait until they are cancelled before placing another.",
     "invalid_order": "Check your order details: something is not valid.",
-    "unauthorized": "Your session expired. Please sign in again.",
     "generic": "The order could not be created. Please try again.",
-    "invalid_discord": "The Discord username is not valid. Check it in your details."
+    "usd_disabled": "Paying in dollars is not available right now. Choose pesos or message us on Discord."
   }
 }
