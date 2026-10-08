@@ -34,7 +34,10 @@
     "payArs": "Pesos (ARS) · transferencia",
     "payArsHint": "Transferencia por CBU/CVU o alias. Ideal si estás en Argentina.",
     "payUsd": "Dólares (USD) · PayPal",
-    "payUsdHint": "Pago por PayPal en dólares. Ideal si estás fuera de Argentina."
+    "payUsdHint": "Pago por PayPal en dólares. Ideal si estás fuera de Argentina.",
+    "payUnavailable": "No disponible por ahora.",
+    "payChooseOther": "Esa forma de pago no está disponible ahora mismo. Elige la otra.",
+    "payNotConfigured": "Los pagos aún no están configurados. Escríbenos en Discord para comprar."
   },
   "summary": {
     "title": "Resumen",
@@ -49,6 +52,7 @@
     "too_many_open_orders": "Ya tienes varios pedidos pendientes de pago con este correo. Págalos o espera a que se cancelen antes de hacer otro.",
     "invalid_order": "Revisa los datos del pedido: algo no es válido.",
     "generic": "No se ha podido crear el pedido. Inténtalo de nuevo.",
-    "usd_disabled": "El pago en dólares no está disponible ahora mismo. Elige pesos o escríbenos en Discord."
+    "usd_disabled": "El pago en dólares no está disponible ahora mismo. Elige pesos o escríbenos en Discord.",
+    "ars_disabled": "El pago en pesos no está disponible ahora mismo. Elige dólares o escríbenos en Discord."
   }
 }

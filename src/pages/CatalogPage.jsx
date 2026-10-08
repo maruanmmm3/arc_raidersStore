@@ -21,8 +21,8 @@ export function CatalogPage() {
   const { t } = useTranslation('catalog')
   const { filters, update, clear } = useCatalogFilters(kind)
   const { currency, usdRate } = useCurrency()
-  // Los filtros de precio se escriben en la moneda elegida; la BD guarda pesos
-  const toBase = (v) => (v != null && currency === 'USD' ? v * usdRate : v)
+  // Los filtros de precio se escriben en la moneda elegida; la BD guarda dólares
+  const toBase = (v) => (v != null && currency === 'ARS' ? v / usdRate : v)
   const queryFilters = { ...filters, min: toBase(filters.min), max: toBase(filters.max) }
   const { data, isPending, isError, isPlaceholderData, refetch } = useProducts(queryFilters)
 

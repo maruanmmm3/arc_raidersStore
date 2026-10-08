@@ -109,14 +109,14 @@
         "title": "Quiénes somos",
         "body": [
           "El Botín Express es un proyecto de fans sin relación con Embark Studios AB. ARC Raiders y sus elementos son marcas y propiedad de Embark Studios.",
-          "En su versión actual es un proyecto demo: los pedidos no generan ningún cargo y no se entregan objetos reales."
+          "Vendemos armas, modificaciones y planos de ARC Raiders que se entregan dentro del juego, en una partida conjunta coordinada por Discord. Los pagos se hacen por transferencia en pesos o por PayPal en dólares."
         ]
       },
       {
         "title": "Tu cuenta",
         "body": [
           "Para hacer un pedido necesitas una cuenta. Eres responsable de mantener tu contraseña en secreto y de que los datos que indicas (ID de Embark, plataforma) sean correctos.",
-          "Podemos bloquear cuentas que hagan reservas falsas, no se presenten de forma reiterada o traten mal al staff."
+          "Podemos rechazar pedidos o bloquear cuentas que hagan pedidos falsos, no se presenten a la entrega de forma reiterada o traten mal al staff."
         ]
       },
       {
@@ -204,7 +204,7 @@
         "title": "Reembolso completo",
         "body": [
           "Si ya pagaste y no podemos entregar (falta de stock, ningún admin disponible o un fallo nuestro), te devolvemos el importe completo.",
-          "Si no podemos atenderte en tu cita y no aceptas otra hora, también te devolvemos el importe completo."
+          "Si no podemos atenderte en la hora acordada y no aceptas otra, también te devolvemos el importe completo."
         ]
       },
       {
@@ -238,7 +238,7 @@
       {
         "title": "Cómo pedirlo",
         "body": [
-          "Escríbenos en #soporte de Discord con tu código de cita. Respondemos en menos de 48 horas. El reembolso se hace por el mismo medio con el que pagaste."
+          "Escríbenos en #soporte de Discord con tu número de pedido. Respondemos en menos de 48 horas. El reembolso se hace por el mismo medio con el que pagaste."
         ]
       }
     ]
@@ -257,7 +257,7 @@
       {
         "title": "Para qué los usamos",
         "body": [
-          "Para gestionar tu cuenta, preparar y entregar tus pedidos, coordinar la cita en Discord, atenderte en soporte y prevenir abusos. No vendemos tus datos ni los usamos para publicidad."
+          "Para gestionar tu cuenta, preparar y entregar tus pedidos, coordinar la entrega en Discord, atenderte en soporte y prevenir abusos. No vendemos tus datos ni los usamos para publicidad."
         ]
       },
       {

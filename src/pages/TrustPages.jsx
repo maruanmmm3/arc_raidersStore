@@ -5,7 +5,7 @@ import { ButtonLink } from '@/components/ui/Button'
 import { buttonClasses } from '@/components/ui/styles'
 import { usePublicSettings } from '@/features/settings/useSettings'
 
-const DEMO = import.meta.env.VITE_DEMO_MODE !== 'false'
+const DEMO = import.meta.env.VITE_DEMO_MODE === 'true'
 
 // Devuelve siempre un array, aunque falte la clave en un idioma
 function useList(key) {

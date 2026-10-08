@@ -1,9 +1,10 @@
 # El Botín Express
 
-Tienda demo de armas, modificaciones y planos de ARC Raiders con entrega por cita en Discord.
+Tienda de armas, modificaciones y planos de ARC Raiders. Compra sin registro, pago por transferencia (ARS) o PayPal (USD) y entrega en una partida coordinada por Discord.
 React + Vite, Supabase (Auth, Postgres, Storage, Edge Functions), Tailwind CSS, TanStack Query y react-i18next.
 
-> Proyecto de aprendizaje. No se venden objetos reales: los ToS de Embark prohíben el comercio con dinero real.
+> Los términos de servicio de Embark Studios prohíben intercambiar objetos del juego por dinero real y prevén
+> sanciones en las cuentas implicadas. Los textos legales de `/terminos` lo indican al comprador.
 
 ## Base de datos compartida
 

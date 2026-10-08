@@ -34,7 +34,10 @@
     "payArs": "Pesos (ARS) · bank transfer",
     "payArsHint": "Transfer to a CBU/CVU or alias. Best if you are in Argentina.",
     "payUsd": "Dollars (USD) · PayPal",
-    "payUsdHint": "Pay with PayPal in US dollars. Best if you are outside Argentina."
+    "payUsdHint": "Pay with PayPal in US dollars. Best if you are outside Argentina.",
+    "payUnavailable": "Not available right now.",
+    "payChooseOther": "That payment method is not available right now. Choose the other one.",
+    "payNotConfigured": "Payments are not set up yet. Message us on Discord to buy."
   },
   "summary": {
     "title": "Summary",
@@ -49,6 +52,7 @@
     "too_many_open_orders": "You already have several unpaid orders with this email. Pay them or wait until they are cancelled before placing another.",
     "invalid_order": "Check your order details: something is not valid.",
     "generic": "The order could not be created. Please try again.",
-    "usd_disabled": "Paying in dollars is not available right now. Choose pesos or message us on Discord."
+    "usd_disabled": "Paying in dollars is not available right now. Choose pesos or message us on Discord.",
+    "ars_disabled": "Paying in pesos is not available right now. Choose dollars or message us on Discord."
   }
 }

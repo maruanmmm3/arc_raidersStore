@@ -110,14 +110,14 @@
         "title": "Who we are",
         "body": [
           "El Botín Express is a fan project not affiliated with Embark Studios AB. ARC Raiders and its elements are trademarks and property of Embark Studios.",
-          "In its current version it is a demo project: orders are not charged and no real items are delivered."
+          "We sell ARC Raiders weapons, mods and blueprints delivered in game, in a joint match arranged on Discord. Payments are made by bank transfer in pesos or by PayPal in US dollars."
         ]
       },
       {
         "title": "Your account",
         "body": [
           "You need an account to place an order. You are responsible for keeping your password secret and for the details you provide (Embark ID, platform) being correct.",
-          "We may block accounts that make fake bookings, repeatedly miss appointments or mistreat staff."
+          "We may reject orders or block accounts that place fake orders, repeatedly miss deliveries or mistreat staff."
         ]
       },
       {
@@ -205,7 +205,7 @@
         "title": "Full refund",
         "body": [
           "If you already paid and we cannot deliver (out of stock, no admin available or a mistake on our side), we refund the full amount.",
-          "If we cannot serve you at your appointment and you do not accept another time, we also refund the full amount."
+          "If we cannot serve you at the agreed time and you do not accept another one, we also refund the full amount."
         ]
       },
       {
@@ -239,7 +239,7 @@
       {
         "title": "How to request it",
         "body": [
-          "Message us in #support on Discord with your appointment code. We reply within 48 hours. Refunds go back through the same method you paid with."
+          "Message us in #support on Discord with your order number. We reply within 48 hours. Refunds go back through the same method you paid with."
         ]
       }
     ]
@@ -258,7 +258,7 @@
       {
         "title": "What we use it for",
         "body": [
-          "To run your account, prepare and deliver your orders, coordinate the appointment on Discord, help you in support and prevent abuse. We do not sell your data or use it for advertising."
+          "To run your account, prepare and deliver your orders, coordinate the delivery on Discord, help you in support and prevent abuse. We do not sell your data or use it for advertising."
         ]
       },
       {

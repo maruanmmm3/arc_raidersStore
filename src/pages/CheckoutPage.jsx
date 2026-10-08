@@ -36,7 +36,7 @@ export function CheckoutPage() {
   const queryClient = useQueryClient()
   const { user, profile } = useAuth()
   const cart = useCart()
-  const { currency, setCurrency, usdEnabled, usdRate, price } = useCurrency()
+  const { currency, setCurrency, canPay, usdRate, price } = useCurrency()
 
   const [form, setForm] = useState(() => ({
     // El nombre que trae el login de Discord puede ser el visible: solo se usa si es un usuario válido
@@ -157,32 +157,41 @@ export function CheckoutPage() {
             </label>
           )}
 
-          {usdEnabled && (
-            <fieldset className="flex flex-col gap-2">
-              <legend className="mb-1 text-sm font-medium text-concrete-300">{t('details.payWith')}</legend>
-              {[
-                { value: 'ARS', label: t('details.payArs'), hint: t('details.payArsHint') },
-                { value: 'USD', label: t('details.payUsd'), hint: t('details.payUsdHint') },
-              ].map((opt) => (
+          <fieldset className="flex flex-col gap-2">
+            <legend className="mb-1 text-sm font-medium text-concrete-300">{t('details.payWith')}</legend>
+            {[
+              { value: 'USD', label: t('details.payUsd'), hint: t('details.payUsdHint') },
+              { value: 'ARS', label: t('details.payArs'), hint: t('details.payArsHint') },
+            ].map((opt) => {
+              const disabled = !canPay[opt.value]
+              return (
                 <label
                   key={opt.value}
-                  className={`flex cursor-pointer items-start gap-3 rounded-sm border p-3 ${currency === opt.value ? 'border-signal bg-signal/5' : 'border-carbon-500'}`}
+                  className={`flex items-start gap-3 rounded-sm border p-3 ${currency === opt.value && !disabled ? 'border-signal bg-signal/5' : 'border-carbon-500'} ${disabled ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}`}
                 >
                   <input
                     type="radio"
                     name="currency"
                     value={opt.value}
-                    checked={currency === opt.value}
+                    checked={currency === opt.value && !disabled}
+                    disabled={disabled}
                     onChange={() => setCurrency(opt.value)}
                     className="mt-1 accent-signal"
                   />
                   <span className="flex flex-col">
-                    <span className="font-medium text-concrete-50">{opt.label} · {formatMoney(convertFromBase(cart.subtotalCents, opt.value, usdRate), opt.value, lang)}</span>
-                    <span className="text-sm text-concrete-400">{opt.hint}</span>
+                    <span className="font-medium text-concrete-50">
+                      {opt.label}
+                      {(opt.value === 'USD' || usdRate > 0) &&
+                        ` · ${formatMoney(convertFromBase(cart.subtotalCents, opt.value, usdRate), opt.value, lang)}`}
+                    </span>
+                    <span className="text-sm text-concrete-400">{disabled ? t('details.payUnavailable') : opt.hint}</span>
                   </span>
                 </label>
-              ))}
-            </fieldset>
+              )
+            })}
+          </fieldset>
+          {!canPay[currency] && (
+            <Alert>{canPay.USD || canPay.ARS ? t('details.payChooseOther') : t('details.payNotConfigured')}</Alert>
           )}
 
           <p className="rounded-sm border border-ember/50 bg-ember/10 px-4 py-3 text-sm text-concrete-100">
@@ -201,7 +210,7 @@ export function CheckoutPage() {
 
           {error && <Alert>{t(`errors.${error.code}`, { detail: error.detail, defaultValue: t('errors.generic') })}</Alert>}
 
-          <Button type="submit" size="lg" className="self-start" disabled={busy}>
+          <Button type="submit" size="lg" className="self-start" disabled={busy || !canPay[currency]}>
             {busy ? t('details.submitting') : t('details.submit')}
           </Button>
         </form>

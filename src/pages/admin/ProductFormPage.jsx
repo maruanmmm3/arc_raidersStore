@@ -36,6 +36,13 @@ function Section({ title, children }) {
 
 const one = (rel) => (Array.isArray(rel) ? rel[0] ?? null : rel ?? null)
 
+// "Se verá como US$ 5,00": confirma el importe al cargar precios
+function pricePreview(text, fallback) {
+  const value = Number(String(text).trim().replace(',', '.'))
+  if (!String(text).trim() || !Number.isFinite(value) || value < 0) return fallback
+  return `Se verá como ${formatPrice(Math.round(value * 100), 'es')}`
+}
+
 function ProductForm({ seg, product, options }) {
   const config = ADMIN_KINDS[seg]
   const navigate = useNavigate()
@@ -121,10 +128,10 @@ function ProductForm({ seg, product, options }) {
               {Object.entries(RARITY_LABELS).map(([v, l]) => <option key={v} value={v}>{l}</option>)}
             </select>
           </F>
-          <F label="Precio" error={errors.price}>
-            <input className={`${control} font-mono`} inputMode="decimal" value={f.price} placeholder="4990" aria-invalid={Boolean(errors.price) || undefined} onChange={(e) => set({ price: e.target.value })} />
+          <F label="Precio en dólares (USD)" error={errors.price} hint={pricePreview(f.price, 'En dólares: 4.99 = cuatro con noventa y nueve')}>
+            <input className={`${control} font-mono`} inputMode="decimal" value={f.price} placeholder="4.99" aria-invalid={Boolean(errors.price) || undefined} onChange={(e) => set({ price: e.target.value })} />
           </F>
-          <F label="Precio tachado" error={errors.compareAt} hint="Opcional, para mostrar descuento">
+          <F label="Precio tachado (USD)" error={errors.compareAt} hint={pricePreview(f.compareAt, 'Opcional, para mostrar descuento')}>
             <input className={`${control} font-mono`} inputMode="decimal" value={f.compareAt} onChange={(e) => set({ compareAt: e.target.value })} />
           </F>
           <F label="Stock" error={errors.stock} hint={product?.reserved ? `Vacío = ilimitado · ${product.reserved} reservadas` : 'Vacío = ilimitado'}>

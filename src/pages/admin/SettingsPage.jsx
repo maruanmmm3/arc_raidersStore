@@ -18,8 +18,8 @@ const GROUPS = [
     ],
   },
   {
-    title: 'Pagos en dólares (PayPal)',
-    hint: 'Si los dos campos están completos, la tienda muestra el selector ARS/USD y el cliente puede pagar por PayPal. Deja el email vacío para desactivar el USD.',
+    title: 'Tipo de cambio y PayPal',
+    hint: 'Los precios se cargan en dólares. Con el tipo de cambio, la tienda muestra el selector USD/ARS y acepta pagos en pesos por transferencia (con el CBU o alias de arriba). Con el email de PayPal, acepta pagos en dólares.',
     fields: [
       { key: 'usd_rate', label: 'Tipo de cambio (pesos por 1 USD)', placeholder: '1000', pattern: /^\d+([.,]\d{1,4})?$/, error: 'Escribe un número, por ejemplo 1000 o 1250,50.', numeric: true },
       { key: 'paypal_email', label: 'Email de PayPal', placeholder: 'pagos@…', pattern: /^[^@\s]+@[^@\s]+\.[^@\s]+$/, error: 'Escribe un email válido.' },

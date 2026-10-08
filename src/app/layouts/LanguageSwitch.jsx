@@ -27,11 +27,11 @@ export function LanguageSwitch() {
   )
 }
 
-// Moneda en la que se ven los precios y se paga. Solo aparece si el USD está activado.
+// Moneda en la que se ven los precios (base USD). Solo aparece si hay tipo de cambio para los pesos.
 export function CurrencySwitch() {
   const { t } = useTranslation()
-  const { currency, setCurrency, usdEnabled } = useCurrency()
-  if (!usdEnabled) return null
+  const { currency, setCurrency, showSwitch } = useCurrency()
+  if (!showSwitch) return null
   return (
     <div role="group" aria-label={t('currency')} className="flex rounded-sm border border-carbon-500 font-mono text-xs">
       {CURRENCIES.map((c) => (

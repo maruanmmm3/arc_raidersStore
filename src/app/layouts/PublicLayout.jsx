@@ -5,7 +5,7 @@ import { useAuth } from '@/features/auth/AuthContext'
 import { useCart } from '@/features/cart/CartContext'
 import { CurrencySwitch, LanguageSwitch } from './LanguageSwitch'
 
-const DEMO = import.meta.env.VITE_DEMO_MODE !== 'false'
+const DEMO = import.meta.env.VITE_DEMO_MODE === 'true'
 
 const navItems = [
   { to: '/tienda/armas', key: 'weapons' },

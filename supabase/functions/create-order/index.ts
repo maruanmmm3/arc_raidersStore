@@ -29,7 +29,7 @@ const Body = z.object({
   platform: z.enum(['pc_steam', 'pc_epic', 'ps5', 'xbox']).optional(),
   note: z.string().trim().max(500).optional(),
   saveToProfile: z.boolean().optional(),
-  currency: z.enum(['ARS', 'USD']).default('ARS'),
+  currency: z.enum(['USD', 'ARS']).default('USD'),
 })
 
 // Errores de la función SQL → código que la web sabe traducir
@@ -40,6 +40,7 @@ function mapError(message: string, code?: string): { status: number; code: strin
   if (message.startsWith('ARC_INVALID_DISCORD')) return { status: 400, code: 'invalid_discord' }
   if (message.startsWith('ARC_INVALID_EMAIL')) return { status: 400, code: 'invalid_email' }
   if (message.startsWith('ARC_USD_DISABLED')) return { status: 400, code: 'usd_disabled' }
+  if (message.startsWith('ARC_ARS_DISABLED')) return { status: 400, code: 'ars_disabled' }
   if (message.startsWith('ARC_TOO_MANY_OPEN_ORDERS')) return { status: 429, code: 'too_many_open_orders' }
   if (message.startsWith('ARC_')) return { status: 400, code: 'invalid_order' }
   return { status: 500, code: 'server_error' }
